@@ -37,4 +37,6 @@
     <!-- The Team -->
     <dimen name="team_recycler_height">500dp</dimen>
 
+    <!-- Shortcut picker -->
+    <dimen name="shortcut_picker_left_padding">70dip</dimen>
 </resources>
