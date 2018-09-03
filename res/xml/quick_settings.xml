@@ -136,6 +136,12 @@
 	android:entries="@array/status_bar_weather_entries"
 	android:entryValues="@array/status_bar_weather_values" />
 
+    <Preference
+        android:key="omnijaws_settings"
+        android:title="@string/lockscreen_weather_settings_title"
+        android:summary="@string/lockscreen_weather_settings_summary"
+        android:fragment="com.raven.lair.fragments.OmniJawsSettings" />
+
     <com.corvus.support.preferences.SystemSettingListPreference 
         android:key="qs_datausage" 
         android:title="@string/qs_datausage_title" 
