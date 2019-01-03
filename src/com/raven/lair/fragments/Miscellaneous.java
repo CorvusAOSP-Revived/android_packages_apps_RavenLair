@@ -43,16 +43,14 @@ import java.util.List;
 public class Miscellaneous extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
-     private static final String RINGTONE_FOCUS_MODE = "ringtone_focus_mode";
-
-    private ListPreference mHeadsetRingtoneFocus;
-
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
     private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
+    private static final String RINGTONE_FOCUS_MODE = "ringtone_focus_mode";
+    private static final String PREF_KEY_CUTOUT = "cutout_settings";
 
-
+    private ListPreference mHeadsetRingtoneFocus;
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
     private ListPreference mTileAnimationInterpolator;
@@ -99,13 +97,15 @@ public class Miscellaneous extends SettingsPreferenceFragment
         mTileAnimationDuration.setValue(String.valueOf(tileAnimationDuration));
         updateTileAnimationDurationSummary(tileAnimationDuration);
         mTileAnimationDuration.setOnPreferenceChangeListener(this);
-        
-         mTileAnimationInterpolator = (ListPreference) findPreference(PREF_TILE_ANIM_INTERPOLATOR);
+
+        mTileAnimationInterpolator = (ListPreference) findPreference(PREF_TILE_ANIM_INTERPOLATOR);
         int tileAnimationInterpolator = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.ANIM_TILE_INTERPOLATOR, 0, UserHandle.USER_CURRENT);
         mTileAnimationInterpolator.setValue(String.valueOf(tileAnimationInterpolator));
         updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
         mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
+
+	Preference mCutoutPref = (Preference) findPreference(PREF_KEY_CUTOUT);
     }
 
     @Override

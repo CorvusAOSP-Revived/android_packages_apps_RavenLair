@@ -43,6 +43,12 @@
         android:fragment="com.raven.lair.fragments.DisplayCutoutForceFullscreenSettings"
         settings:controller="com.raven.lair.fragments.DisplayCutoutForceFullscreenPreferenceController" />
 
+    <PreferenceScreen
+        android:key="cutout_settings"
+        android:title="@string/cutout_main"
+        android:summary="@string/cutout_main_summary"
+        android:fragment="com.raven.lair.fragments.CutoutFragment" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
