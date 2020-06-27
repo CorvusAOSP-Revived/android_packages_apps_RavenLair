@@ -33,6 +33,13 @@
         android:title="@string/volume_rocker_music_controls_title"
         android:defaultValue="false" />
 
+    <com.corvus.support.preferences.SystemSettingListPreference
+        android:key="systemui_plugin_volume"
+        android:title="@string/volume_panel"
+        android:entries="@array/volume_panel_entries"
+        android:entryValues="@array/volume_panel_values"
+        android:defaultValue="@string/volume_panel_aosp_val" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
