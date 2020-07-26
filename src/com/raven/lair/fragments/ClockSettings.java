@@ -62,6 +62,7 @@ public class ClockSettings extends SettingsPreferenceFragment implements
     private static final String STATUS_BAR_CLOCK_COLOR = "status_bar_clock_color";
     private static final String STATUS_BAR_CLOCK_SIZE  = "status_bar_clock_size";
     private static final String STATUS_BAR_CLOCK_FONT_STYLE  = "status_bar_clock_font_style";
+    private static final String QS_HEADER_CLOCK_SIZE = "qs_header_clock_size";
     public static final int CLOCK_DATE_STYLE_LOWERCASE = 1;
     public static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
@@ -79,6 +80,7 @@ public class ClockSettings extends SettingsPreferenceFragment implements
     private ColorPickerPreference mClockColor;
     private CustomSeekBarPreference mClockSize;
     private ListPreference mClockFontStyle;
+    private CustomSeekBarPreference mQsClockSize;
     private ListPreference mClockDatePosition;
 
     @Override
@@ -91,7 +93,7 @@ public class ClockSettings extends SettingsPreferenceFragment implements
         int intColor;
         String hexColor;
 
-	// clock settings
+	    // clock settings
         mStatusBarClockShow = (SystemSettingSwitchPreference) findPreference(STATUS_BAR_CLOCK);
         mStatusBarSecondsShow = (SystemSettingSwitchPreference) findPreference(STATUS_BAR_CLOCK_SECONDS);
         mStatusBarClock = (ListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
@@ -133,6 +135,12 @@ public class ClockSettings extends SettingsPreferenceFragment implements
                 Settings.System.STATUS_BAR_CLOCK_FONT_STYLE, 0);
         mClockFontStyle.setValue(String.valueOf(showClockFont));
         mClockFontStyle.setOnPreferenceChangeListener(this);
+
+        mQsClockSize = (CustomSeekBarPreference) findPreference(QS_HEADER_CLOCK_SIZE);
+        int qsClockSize = Settings.System.getInt(resolver,
+                Settings.System.QS_HEADER_CLOCK_SIZE, 14);
+        mQsClockSize.setValue(qsClockSize / 1);
+        mQsClockSize.setOnPreferenceChangeListener(this);
 
         if (DateFormat.is24HourFormat(getActivity())) {
             mStatusBarAmPm.setEnabled(false);
@@ -243,6 +251,11 @@ public class ClockSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver, Settings.System.
                 STATUS_BAR_CLOCK_FONT_STYLE, showClockFont);
             mClockFontStyle.setSummary(mClockFontStyle.getEntries()[index]);
+            return true;
+        }  else if (preference == mQsClockSize) {
+            int width = ((Integer)newValue).intValue();
+            Settings.System.putInt(resolver,  Settings.System.
+                QS_HEADER_CLOCK_SIZE, width);
             return true;
         } else if (preference == mClockDateDisplay) {
             int clockDateDisplay = Integer.valueOf((String) newValue);
