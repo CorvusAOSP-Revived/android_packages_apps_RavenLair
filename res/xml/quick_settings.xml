@@ -24,6 +24,22 @@
         android:summary="@string/qs_bg_use_new_tint_summary"
         android:defaultValue="false" />
 
+   <com.corvus.support.preferences.SecureSettingListPreference
+        android:key="qs_show_brightness_slider"
+        android:title="@string/qs_show_brightness_slider_title"
+        android:summary="%s"
+        android:dialogTitle="@string/qs_show_brightness_slider_title"
+        android:entries="@array/qs_show_brightness_slider_entries"
+        android:entryValues="@array/qs_show_brightness_slider_values"
+        android:defaultValue="1" />
+
+    <com.corvus.support.preferences.SecureSettingSwitchPreference
+        android:key="qs_show_auto_brightness"
+        android:title="@string/qs_show_auto_brightness_title"
+        android:summary="@string/qs_show_auto_brightness_summary"
+        android:defaultValue="true" />
+
+
     <!-- QS Rows&Columns -->
 	<PreferenceCategory
             android:key="qs_columns_rows_category"
