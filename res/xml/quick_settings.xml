@@ -69,6 +69,11 @@
             settings:units="" />
         </PreferenceCategory>
 
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="qs_tile_title_visibility"
+        android:title="@string/qs_tile_title_visibility_title"
+        android:defaultValue="true" />
+
            <!-- QS media player -->
     <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:key="qs_media_player"
