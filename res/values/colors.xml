@@ -63,6 +63,7 @@
     <color name="dt_corvus_parts_icon_tint">@color/orange_active</color>
     <color name="dt_icon_manager_icon_tint">@color/purple_active</color>
     <color name="dt_quicksettings_icon_tint">@color/cyan_active</color>
+    <color name="dt_traffic_icon_tint">@color/pink_active</color>
 
     <color name="red_bg_light">#3dcf605a</color>
     <color name="blue_bg_light">#3d2598b9</color>
