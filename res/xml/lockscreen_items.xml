@@ -34,6 +34,12 @@
         android:defaultValue="false" />
 
     <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="hide_lockicon"
+        android:title="@string/lockscreen_lock_icon_title"
+        android:summary="@string/lockscreen_lock_icon_summary"
+        android:defaultValue="true" />
+
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
         android:title="@string/lockscreen_battery_info_title"
         android:summary="@string/lockscreen_battery_info_summary"
