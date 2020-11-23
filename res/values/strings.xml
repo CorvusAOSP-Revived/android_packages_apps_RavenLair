@@ -153,5 +153,8 @@
     <string name="lockscreen_media_art_title">Media Art</string>
     <string name="lockscreen_media_art_summary">Toggle visibility of media art</string>
 
+    <!-- Lock screen media blur -->
+    <string name="lockscreen_media_blur_title">Media artwork blur level</string>
+
 </resources>
 
