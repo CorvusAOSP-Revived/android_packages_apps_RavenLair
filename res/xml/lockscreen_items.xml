@@ -69,6 +69,18 @@
         android:title="@string/lockscreen_visualizer_enable"
         android:summary="@string/lockscreen_visualizer_enable_summary"
         android:defaultValue="false" />
+     
+     <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_charging_animation"
+        android:title="@string/lockscreen_charging_animation_title"
+        android:summary="@string/lockscreen_charging_animation_summary"
+        android:defaultValue="true" />
+
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="charging_animation"
+        android:title="@string/charging_animation_title"
+        android:summary="@string/charging_animation_summary"
+        android:defaultValue="true" />
    
      
     <com.corvus.support.preferences.SystemSettingSeekBarPreference
