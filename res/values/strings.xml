@@ -104,8 +104,13 @@
     <string name="charging_animation_summary">Display an animation when the device is plugged in</string> 
 
      <!-- Lockscreen Charging animation -->
-    <string name="lockscreen_charging_animation_title">Lockscreen charging animation</string>
-    <string name="lockscreen_charging_animation_summary">Display a fancy animation when the device is charging</string>  
+      <string name="lockscreen_charging_animation_title">Charging animation</string>
+    <string name="lockscreen_charging_animation_flash">Flash</string>
+    <string name="lockscreen_charging_animation_battery">Battery</string>
+    <string name="lockscreen_charging_animation_drop">Drop</string>
+    <string name="lockscreen_charging_animation_explosion">Explosion</string>
+    <string name="lockscreen_charging_animation_water">Water</string>
+
 
     <!-- Double Tap gestures -->
     <string name="double_tap_sleep_lockscreen_title">Double tap to sleep on lockscreen</string>
