@@ -244,6 +244,7 @@
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
 
     <!-- Show VoLTE icon on statusbar -->
+    <string name="volte_icon_oos10">OOS 10</string>
     <string name="volte_switch_title">VoLTE icon</string>
     <string name="volte_switch_summary">Display VoLTE icon</string>
     <string name="volte_icon_title">VoLTE icon</string>
