@@ -126,7 +126,11 @@
     <string name="lockscreen_charging_animation_phone">Phone</string>
     <string name="lockscreen_charging_animation_stack">Stack</string>
     <string name="lockscreen_charging_animation_wavy">Wavy</string>
-
+    <string name="lockscreen_charging_animation_split">Split Loading</string>
+    <string name="lockscreen_charging_animation_yellow">Yellow Animation</string>
+    <string name="lockscreen_charging_animation_virus">Virus</string>
+    <string name="lockscreen_charging_animation_wash">Precaution 1</string>
+    <string name="lockscreen_charging_animation_wear">Precaution 2</string>
 
     <!-- Double Tap gestures -->
     <string name="double_tap_sleep_lockscreen_title">Double tap to sleep on lockscreen</string>
