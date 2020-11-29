@@ -186,6 +186,10 @@
     <string name="statusbar_items_title">Statusbar Items</string>
     <string name="statusbar_items_summary">Enable your favorite statusbar icons</string>
 
+    <!-- Screenshot Sound  -->
+    <string name="screenshot_sound_title">Screenshot sound</string>
+    <string name="screenshot_sound_summary">Toggle sound played while taking screenshot</string>
+
      <!-- Media art -->
     <string name="lockscreen_media_art_title">Media Art</string>
     <string name="lockscreen_media_art_summary">Toggle visibility of media art</string>
@@ -197,6 +201,7 @@
     <string name="lockscreen_visualizer_title">Visualizer</string>
     <string name="lockscreen_visualizer_enable">Music Visualizer</string>
     <string name="lockscreen_visualizer_enable_summary">Show visualizer bars while playing music</string>
+
 
     <!-- Incall vibrate options -->
     <string name="incall_vibration_category">In-call Vibration</string>
@@ -286,5 +291,6 @@
     <string name="vowifi_icon_simple1">Simple1 Icon</string>
     <string name="vowifi_icon_simple2">Simple2 Icon</string>
     <string name="vowifi_icon_simple3">Simple3 Icon</string>
+
 </resources>
 
