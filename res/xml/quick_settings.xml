@@ -23,6 +23,15 @@
         android:title="@string/qs_bg_use_new_tint"
         android:summary="@string/qs_bg_use_new_tint_summary"
         android:defaultValue="false" />
+    
+    <!-- QS brightness slider -->
+    <com.corvus.support.preferences.SystemSettingMasterSwitchPreference
+            android:key="qs_show_brightness"
+            android:title="@string/qs_show_brightness_title"
+            android:summary="@string/qs_show_brightness_summary"
+            android:fragment="com.raven.lair.fragments.BrightnessSliderSettings"
+            android:defaultValue="true" />
+
 
     <com.corvus.support.preferences.SecureSettingSwitchPreference
 	android:key="quick_settings_vibrate"
