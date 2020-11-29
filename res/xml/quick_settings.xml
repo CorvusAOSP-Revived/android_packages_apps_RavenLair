@@ -32,6 +32,7 @@
             android:fragment="com.raven.lair.fragments.BrightnessSliderSettings"
             android:defaultValue="true" />
 
+    
 
     <com.corvus.support.preferences.SecureSettingSwitchPreference
 	android:key="quick_settings_vibrate"
