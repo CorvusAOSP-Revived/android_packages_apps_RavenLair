@@ -26,6 +26,13 @@
         android:title="@string/qs_show_auto_brightness_title"
         android:summary="@string/qs_show_auto_brightness_summary"
         android:defaultValue="true" />
+
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="qs_show_brightness_above_footer"
+        android:title="@string/qs_show_brightness_above_footer_title"
+        android:summary="@string/qs_show_brightness_above_footer_summary"
+        android:dependency="qs_brightness_position_bottom"
+        android:defaultValue="false" />
    
 
 </PreferenceScreen>
