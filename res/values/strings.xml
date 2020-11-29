@@ -402,5 +402,9 @@
     <!-- Notification headers -->
     <string name="notification_headers_title">Notification Headers</string>
     <string name="notification_headers_summary">Show headers in the notification shade\nRequires a SystemUI restart</string>
+
+    <!-- Center R Notification headers -->
+    <string name="center_notification_headers_title">Center notification headers</string>
+    <string name="center_notification_headers_summary">Whether to Center R style notification headers (Requires a SystemUI restart)</string>
 </resources>
 
