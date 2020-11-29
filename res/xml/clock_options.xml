@@ -18,4 +18,9 @@
             xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
             android:title="@string/clock_options_title" >
 
+      <Preference
+           android:key="clock_settings"
+           android:title="@string/clock_style_category_title"
+           android:summary="@string/clock_style_category_summary"
+           android:fragment="com.raven.lair.fragments.ClockSettings" />
 </PreferenceScreen>

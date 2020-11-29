@@ -308,13 +308,40 @@
     <string name="qs_show_brightness_above_footer_title">Above footer</string>
     <string name="qs_show_brightness_above_footer_summary">Show bottom brightness slider above QS footer</string>
     <string name="qs_show_auto_brightness_title">Auto brightness icon</string>
-
     <string name="qs_show_auto_brightness_summary">Show an auto brightness toggle near the brightness slider</string>
 
     <!-- QS media player -->
     <string name="qs_media_player_title">Media player</string>
     <string name="qs_media_player_summary_on">Show media player in QS\nRequires a SystemUI restart</string>
     <string name="qs_media_player_summary_off">Show media player as a notification\nRequires a SystemUI restart</string>
-    
+   
+    <!-- Statusbar Clock -->
+    <string name="clock_style_category_title">Clock Settings</string>
+    <string name="clock_style_category_summary">Statusbar Clock Tuner</string>
+    <string name="status_bar_clock_title">Clock settings</string>
+    <string name="status_bar_clock_show">Show clock and date</string>
+    <string name="status_bar_clock_style_title">Clock style</string>
+    <string name="status_bar_clock_style_right">Right</string>
+    <string name="status_bar_clock_style_center">Center</string>
+    <string name="status_bar_clock_style_left">Left</string>
+    <string name="status_bar_am_pm_title">AM/PM style</string>
+    <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
+    <string name="status_bar_am_pm_normal">Normal</string>
+    <string name="status_bar_am_pm_small">Small</string>
+    <string name="status_bar_am_pm_hidden">Hidden (default)</string>
+    <string name="clock_seconds_display">Show seconds</string>
+    <string name="clock_date_display">Date</string>
+    <string name="clock_date_display_summary">Display custom date before the clock</string>
+    <string name="clock_date_display_none">Don\'t show</string>
+    <string name="clock_date_display_small">Small font size</string>
+    <string name="clock_date_display_normal">Normal font size</string>
+    <string name="clock_date_style">Date style</string>
+    <string name="clock_date_style_normal">Normal</string>
+    <string name="clock_date_style_lowercase">Lowercase</string>
+    <string name="clock_date_style_uppercase">Uppercase</string>
+    <string name="clock_date_format_custom">Custom java format</string>
+    <string name="clock_date_format">Date format</string>
+    <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Enter string</string>
 </resources>
 
