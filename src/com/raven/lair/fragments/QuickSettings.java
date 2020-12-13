@@ -68,6 +68,12 @@ public class QuickSettings extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mBrightnessSlider) {
+            Boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    BRIGHTNESS_SLIDER, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 
