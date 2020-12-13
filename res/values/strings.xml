@@ -146,9 +146,6 @@
     <!-- Lock screen cover art -->
     <string name="lockscreen_media_category">Music/Media</string>
 
-    <string name="lockscreen_lock_icon_title">Lock icon</string>
-    <string name="lockscreen_lock_icon_summary">Display lock icon on the lockscreen</string>
-
     <!-- Lockscreen album art filter -->
     <string name="lockscreen_albumart_filter_title">Media cover art filter</string>
     <string name="lockscreen_albumart_filter_none">None</string>
