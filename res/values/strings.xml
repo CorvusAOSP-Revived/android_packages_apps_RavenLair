@@ -411,5 +411,12 @@
     <string name="theming_settings_dashboard_icons_default_accent2">Accent background</string>
     <string name="theming_settings_dashboard_icons_plain">Plain</string>
     <string name="theming_settings_dashboard_icons_plain_accent">Plain accent</string>
+
+    <!-- FOD icon picker -->
+    <string name="fod_icon_picker_category_title">FOD settings</string>
+
+    <!-- FOD animations -->
+    <string name="fod_recog_animation">Fingerprint animation</string>
+    <string name="fod_recog_animation_summary">Shows an animation while reading your finger</string>
 </resources>
 

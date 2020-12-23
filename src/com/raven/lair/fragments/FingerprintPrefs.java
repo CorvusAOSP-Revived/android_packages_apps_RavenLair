@@ -26,6 +26,7 @@ import androidx.preference.*;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import com.android.internal.util.corvus.fod.FodUtils;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
@@ -38,10 +39,20 @@ import java.util.List;
 public class FingerprintPrefs extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
+    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
+
+    private PreferenceCategory mFODIconPickerCategory;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.fingerprint_prefs);
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mFODIconPickerCategory = findPreference(FOD_ICON_PICKER_CATEGORY);
+        if (mFODIconPickerCategory != null && !FodUtils.hasFodSupport(getContext())) {
+            prefScreen.removePreference(mFODIconPickerCategory);
+        }
     }
 
     @Override
