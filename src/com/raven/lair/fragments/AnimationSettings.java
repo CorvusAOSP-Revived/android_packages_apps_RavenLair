@@ -61,7 +61,9 @@ public class AnimationSettings extends SettingsPreferenceFragment
     private static final String WALLPAPER_CLOSE = "wallpaper_close";
     private static final String WALLPAPER_INTRA_OPEN = "wallpaper_intra_open";
     private static final String WALLPAPER_INTRA_CLOSE = "wallpaper_intra_close";
+    private static final String KEY_SCREEN_OFF_ANIMATION = "screen_off_animation";
 
+    private ListPreference mScreenOffAnimation;
     ListPreference mActivityOpenPref;
     ListPreference mActivityClosePref;
     ListPreference mTaskOpenPref;
@@ -166,6 +168,13 @@ public class AnimationSettings extends SettingsPreferenceFragment
         mWallpaperIntraClose.setSummary(getProperSummary(mWallpaperIntraClose));
         mWallpaperIntraClose.setEntries(mAnimationsStrings);
         mWallpaperIntraClose.setEntryValues(mAnimationsNum);
+
+        mScreenOffAnimation = (ListPreference) findPreference(KEY_SCREEN_OFF_ANIMATION);
+        int screenOffAnimation = Settings.System.getInt(getContentResolver(),
+                Settings.System.SCREEN_OFF_ANIMATION, 0);
+        mScreenOffAnimation.setValue(Integer.toString(screenOffAnimation));
+        mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntry());
+        mScreenOffAnimation.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -178,7 +187,14 @@ public class AnimationSettings extends SettingsPreferenceFragment
         ContentResolver resolver = getActivity().getContentResolver();
         boolean result = false;
 
-        if (preference == mActivityOpenPref) {
+
+        if (preference == mScreenOffAnimation) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mScreenOffAnimation.findIndexOfValue((String) newValue);
+            mScreenOffAnimation.setSummary(mScreenOffAnimation.getEntries()[index]);
+            Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_OFF_ANIMATION, value);
+            return true;
+        } else if (preference == mActivityOpenPref) {
             int val = Integer.parseInt((String) newValue);
             result = Settings.Global.putInt(mContext.getContentResolver(),
                     Settings.Global.ACTIVITY_ANIMATION_CONTROLS[0], val);
