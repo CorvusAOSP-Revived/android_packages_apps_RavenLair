@@ -119,6 +119,12 @@
 
     </PreferenceCategory>
 
+    <Preference
+        android:key="custom_header"
+        android:fragment="com.raven.lair.fragments.QsCustomHeaderSettings"
+        android:title="@string/custom_header_title"
+        android:summary="@string/custom_header_summary" />
+
     <com.corvus.support.preferences.SecureSettingSwitchPreference
 	android:key="quick_settings_vibrate"
         android:title="@string/quick_settings_vibrate_title"
