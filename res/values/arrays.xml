@@ -381,6 +381,14 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+     <string-array name="torch_long_press_power_timeout_entries" translatable="false">
+        <item>@string/torch_long_press_power_timeout_never</item>
+        <item>@string/torch_long_press_power_timeout_1min</item>
+        <item>@string/torch_long_press_power_timeout_2min</item>
+        <item>@string/torch_long_press_power_timeout_5min</item>
+        <item>@string/torch_long_press_power_timeout_10min</item>
+    </string-array>
+
 
     <!-- FOD Recognizing fingerprint animations -->
     <string-array  name="fod_recog_animation_entries" translatable="false">
@@ -450,5 +458,13 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
+    </string-array>
+
+    <string-array name="torch_long_press_power_timeout_values" translatable="false">
+        <item>0</item>
+        <item>60</item>
+        <item>120</item>
+        <item>300</item>
+        <item>600</item>
     </string-array>
 </resources>
