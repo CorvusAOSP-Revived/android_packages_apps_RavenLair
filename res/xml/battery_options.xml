@@ -18,6 +18,16 @@
             xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
             android:title="@string/battery_options_title" >
 
+    <Preference
+        android:key="batterybar_settings"
+        android:title="@string/battery_bar_title"
+        android:summary="@string/battery_bar_summary"
+        android:fragment="com.raven.lair.fragments.BatteryBarSettings"/>
+   
+   <PreferenceCategory
+        android:title="@string/battery_options_category" >
+   
+
    <!-- Battery mode -->
     <com.corvus.support.preferences.SystemSettingListPreference
         android:key="status_bar_battery_style"
@@ -41,4 +51,5 @@
         android:title="@string/status_bar_battery_text_charging_title"
         android:summary="@string/status_bar_battery_text_charging_summary"
         android:defaultValue="true" />
+  </PreferenceCategory>
 </PreferenceScreen>
