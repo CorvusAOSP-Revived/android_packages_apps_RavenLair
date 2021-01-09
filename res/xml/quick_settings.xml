@@ -60,4 +60,17 @@
         android:entries="@array/quick_pulldown_entries"
         android:entryValues="@array/quick_pulldown_values"
         android:defaultValue="1" />
+   
+     <!-- QS footer text toggle -->
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="qs_footer_text_show"
+        android:title="@string/qs_footer_text_show_title"
+        android:defaultValue="false" />
+
+    <!-- QS footer text string -->
+    <com.corvus.support.preferences.SystemSettingEditTextPreference
+        android:key="qs_footer_text_string"
+        android:title="@string/qs_footer_text_string_title"
+        android:dependency="qs_footer_text_show"
+        android:defaultValue="#StayFlocked" />
 </PreferenceScreen>

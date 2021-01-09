@@ -16,16 +16,26 @@
 
 package com.raven.lair.fragments;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import androidx.preference.*;
+import androidx.preference.ListPreference;
+import androidx.preference.SwitchPreference;
+
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
 
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -35,6 +45,8 @@ import com.android.settings.Utils;
 
 import com.corvus.support.preferences.CustomSeekBarPreference;
 import com.corvus.support.preferences.SystemSettingMasterSwitchPreference;
+import com.corvus.support.preferences.SystemSettingEditTextPreference;
+
 
 
 import java.util.ArrayList;
@@ -49,10 +61,16 @@ public class QuickSettings extends SettingsPreferenceFragment
 
     private SystemSettingMasterSwitchPreference mBrightnessSlider;
 
+     private static final String QS_FOOTER_TEXT_STRING = "qs_footer_text_string";
+
+    private SystemSettingEditTextPreference mFooterString;
+
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
         addPreferencesFromResource(R.xml.quick_settings);
+        PreferenceScreen prefSet = getPreferenceScreen();
 
         final ContentResolver resolver = getActivity().getContentResolver();
 
@@ -63,6 +81,18 @@ public class QuickSettings extends SettingsPreferenceFragment
                 BRIGHTNESS_SLIDER, 1) == 1;
         mBrightnessSlider.setChecked(enabled);
 
+       mFooterString = (SystemSettingEditTextPreference) findPreference(QS_FOOTER_TEXT_STRING);
+        mFooterString.setOnPreferenceChangeListener(this);
+        String footerString = Settings.System.getString(getContentResolver(),
+                QS_FOOTER_TEXT_STRING);
+        if (footerString != null && footerString != "")
+            mFooterString.setText(footerString);
+        else {
+            mFooterString.setText("#StayFlocked");
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.QS_FOOTER_TEXT_STRING, "#StayFlocked");
+        }
+
     }
 
     @Override
@@ -72,6 +102,17 @@ public class QuickSettings extends SettingsPreferenceFragment
             Boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     BRIGHTNESS_SLIDER, value ? 1 : 0);
+            return true;
+        }else if (preference == mFooterString) {
+            String value = (String) newValue;
+            if (value != "" && value != null)
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.QS_FOOTER_TEXT_STRING, value);
+            else {
+                mFooterString.setText("#StayFlocked");
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.QS_FOOTER_TEXT_STRING, "#StayFlocked");
+            }
             return true;
         }
         return false;
