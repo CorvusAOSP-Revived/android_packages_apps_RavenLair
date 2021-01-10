@@ -102,6 +102,10 @@
     <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
     <string name="global_actions_advanced_reboot_summary">When restarting also show options for recovery and bootloader</string>
 
+    <!-- Heads up -->
+    <string name="heads_up_notifications">Heads Up</string>
+    <string name="heads_up_summary">Customize Heads Up Behavior</string>
+
   <!-- Network traffic -->
     <string name="network_traffic_state_title">Show net activity in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
@@ -491,6 +495,10 @@
     <string name="ringtone_focus_mode_title">Where to play ringtones from</string>
     <string name="ringtone_focus_mode_dynamic">From headset if connected and playing music</string>
     <string name="ringtone_focus_mode_stock">"From speakerphone (AOSP default)"</string>
+
+    <!-- Heads up options -->
+    <string name="less_boring_heads_up_title">Dialer HeadsUp</string>
+    <string name="less_boring_heads_up_summary">Show heads up only for dialer n clock app and disable all others</string>
 
     <!-- QS footer icons -->
     <string name="qs_running_services_title">Running Services Icon</string>
