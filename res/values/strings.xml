@@ -491,5 +491,9 @@
     <string name="ringtone_focus_mode_title">Where to play ringtones from</string>
     <string name="ringtone_focus_mode_dynamic">From headset if connected and playing music</string>
     <string name="ringtone_focus_mode_stock">"From speakerphone (AOSP default)"</string>
+
+    <!-- QS footer icons -->
+    <string name="qs_running_services_title">Running Services Icon</string>
+    <string name="qs_running_services_summary">Enable the running services icon in the footer</string>
 </resources>
 
