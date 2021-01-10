@@ -41,4 +41,11 @@
             android:summary="@string/center_notification_headers_summary"
             android:dependency="notification_headers"
             android:defaultValue="true" />
+       
+       <com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:key="less_boring_heads_up"
+            android:title="@string/less_boring_heads_up_title"
+            android:summary="@string/less_boring_heads_up_summary"
+            android:defaultValue="true" />
+
 </PreferenceScreen>
