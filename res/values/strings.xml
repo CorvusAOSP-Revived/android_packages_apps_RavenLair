@@ -462,6 +462,12 @@
     <string name="notification_headers_title">Notification Headers</string>
     <string name="notification_headers_summary">Show headers in the notification shade\nRequires a SystemUI restart</string>
 
+
+    <!-- NavBar IME arrows -->
+    <string name="navigation_bar_arrow_keys_title">IME arrows</string>
+    <string name="navigation_bar_arrow_keys_summary">Show arrow keys on navbar while typing</string>
+ 
+ 
     <!-- Center R Notification headers -->
     <string name="center_notification_headers_title">Center notification headers</string>
     <string name="center_notification_headers_summary">Whether to Center R style notification headers (Requires a SystemUI restart)</string>
