@@ -16,6 +16,8 @@
 
 package com.raven.lair.fragments;
 
+import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL;
+import android.content.res.Resources;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -38,6 +40,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
 import com.corvus.support.preferences.SystemSettingSwitchPreference;
+import com.corvus.support.preferences.SystemSettingListPreference;
+import com.corvus.support.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,12 +49,32 @@ import java.util.List;
 public class NavigationOptions extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
+    private static final String NAVBAR_INVERSE = "navigation_bar_inverse";
+    private static final String NAVBAR_LAYOUT = "navbar_layout_views";
+
+
+    private SystemSettingSwitchPreference mNavbarInverse;
+    private SystemSettingListPreference mNavbarLayout;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.navigation_options);
+         final Resources res = getResources();
 
         final PreferenceScreen prefSet = getPreferenceScreen();
+
+         mNavbarInverse = (SystemSettingSwitchPreference) findPreference(NAVBAR_INVERSE);
+        mNavbarLayout = (SystemSettingListPreference) findPreference(NAVBAR_LAYOUT);
+        int navMode = res.getInteger(
+                com.android.internal.R.integer.config_navBarInteractionMode);
+        if (navMode == NAV_BAR_MODE_GESTURAL) {
+            mNavbarInverse.setEnabled(false);
+            mNavbarInverse.setSummary(R.string.navbar_gesture_enabled);
+            mNavbarLayout.setEnabled(false);
+            mNavbarLayout.setSummary(R.string.navbar_gesture_enabled);
+        }
 
     }
 
