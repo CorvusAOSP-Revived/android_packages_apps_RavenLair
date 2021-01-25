@@ -33,6 +33,13 @@
             android:summary="@string/double_tap_on_doze_to_wake_summary"
             android:defaultValue="true" />
 
+     <!-- Launch music player when headset is connected -->
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="headset_connect_player"
+        android:title="@string/headset_connect_player_title"
+        android:summary="@string/headset_connect_player_summary"
+        android:defaultValue="false" />
+
      <!-- Screenshot Sound  -->
     <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:key="screenshot_sound"
