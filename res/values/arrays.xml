@@ -489,7 +489,6 @@
         <item>@string/fod_recog_animation_pureview_molecular</item>
         <item>@string/fod_recog_animation_rog_fusion</item>
         <item>@string/fod_recog_animation_rog_pulsar</item>
-        <item>@string/fod_recog_animation_rog_supernova</item>
     </string-array>
 
     <string-array name="fod_recog_animation_values" translatable="false">
@@ -516,7 +515,6 @@
         <item>20</item>
         <item>21</item>
         <item>22</item>
-        <item>23</item>
     </string-array>
 
     <!-- FOD pressed color -->
