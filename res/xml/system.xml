@@ -24,6 +24,13 @@
         android:fragment="com.raven.lair.fragments.Notifications" />
 
     <com.raven.lair.preferences.CategoryPreference
+        android:key="gestures_category"
+        android:icon="@drawable/dt_gestures"
+        android:title="@string/gestures_title"
+        android:summary="@string/gestures_summary"
+        android:fragment="com.raven.lair.fragments.Gestures" />
+
+    <com.raven.lair.preferences.CategoryPreference
         android:key="miscellaneous_category"
         android:icon="@drawable/dt_miscellaneous"
         android:title="@string/miscellaneous_title"

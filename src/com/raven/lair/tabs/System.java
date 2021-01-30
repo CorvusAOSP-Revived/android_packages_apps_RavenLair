@@ -31,6 +31,7 @@ public class System extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String NOTIFICATIONS_CATEGORY = "notifications_category";
+    private static final String GESTURES_CATEGORY = "gestures_category";
     private static final String MISC_CATEGORY = "miscellaneous_category";
 
     @Override
@@ -41,6 +42,11 @@ public class System extends SettingsPreferenceFragment
         Preference Notifications = findPreference(NOTIFICATIONS_CATEGORY);
         if (!getResources().getBoolean(R.bool.has_notifications)) {
             getPreferenceScreen().removePreference(Notifications);
+        }
+
+        Preference Gestures = findPreference("gestures_category");
+        if (!getResources().getBoolean(R.bool.has_gestures)) {
+            getPreferenceScreen().removePreference(Gestures);
         }
 
         Preference MiscOptions = findPreference("miscellaneous_category");
