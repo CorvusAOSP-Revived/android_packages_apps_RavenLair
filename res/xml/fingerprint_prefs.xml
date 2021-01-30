@@ -47,7 +47,7 @@
             android:summary="@string/fod_recog_animation_summary"
             android:defaultValue="false" />
 
-        <com.corvus.support.preferences.SystemSettingSwitchPreference
+        <com.corvus.support.preferences.SystemSettingListPreference
             android:key="fod_anim"
             android:title="@string/fod_recog_animation_effect_title"
             android:summary="%s"
