@@ -61,6 +61,7 @@
     <string name="dev_options_title">Developer options items</string>
     <string name="gestures_title">Gestures</string>
     <string name="gestures_summary">Make your device smart with some Gestures</string>
+    <string name="statusbar_gestures">Statusbar Gestures</string>
 
     <!-- Lockscreen -->
     <string name="fingerprint_prefs_title">Fingerprint prefs</string>
@@ -565,5 +566,9 @@
     <!-- Heads up options -->
     <string name="less_boring_heads_up_title">Dialer HeadsUp</string>
     <string name="less_boring_heads_up_summary">Show heads up only for dialer n clock app and disable all others</string>
+
+     <!-- Brightness control -->
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 </resources>
 
