@@ -61,6 +61,7 @@
     <string name="dev_options_title">Developer options items</string>
     <string name="gestures_title">Gestures</string>
     <string name="gestures_summary">Make your device smart with some Gestures</string>
+    <string name="statusbar_gestures">Statusbar Gestures</string>
 
     <!-- Lockscreen -->
     <string name="fingerprint_prefs_title">Fingerprint prefs</string>
@@ -564,5 +565,9 @@
     <!-- Doze on charge -->
     <string name="doze_on_charge_title">Always on when charging</string>
     <string name="doze_on_charge_summary">Show doze screen all the time when charging</string>
+
+     <!-- Brightness control -->
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 </resources>
 
