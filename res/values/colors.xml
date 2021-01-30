@@ -30,6 +30,7 @@
     <!--DT Icon backgorunds-->
     <color name="dt_notifications_color">@color/red_bg_light</color>
     <color name="dt_miscellaneous_color">@color/blue_bg_light</color>
+    <color name="dt_gestures_color">@color/green_bg_light</color>
 
     <color name="dt_lockscreen_items_color">@color/green_bg_light</color>
     <color name="dt_fingerprint_prefs_color">@color/orange_bg_light</color>
@@ -49,6 +50,7 @@
     <!--DT Icon foreground tint-->
     <color name="dt_notifications_icon_tint">@color/red_active</color>
     <color name="dt_miscellaneous_icon_tint">@color/blue_active</color>
+    <color name="dt_gestures_icon_tint">@color/green_active</color>
 
     <color name="dt_lockscreen_items_icon_tint">@color/green_active</color>
     <color name="dt_fingerprint_prefs_icon_tint">@color/orange_active</color>

@@ -55,4 +55,7 @@
     <!-- Whether to display power menu category -->
     <bool name="has_powermenu">true</bool>
 
+    <!-- Whether to display gestures category -->
+    <bool name="has_gestures">true</bool>
+
 </resources>

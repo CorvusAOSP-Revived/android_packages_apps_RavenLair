@@ -52,7 +52,6 @@
 
     <!-- Categories -->
     <!-- System -->
-    
     <string name="miscellaneous_title">Miscellaneous</string>
     <string name="miscellaneous_summary">Miscellaneous tweaks</string>
     <string name="powermenu_title">Power menu</string>
@@ -60,6 +59,9 @@
     <string name="notifications_title">Notifications</string>
     <string name="notifications_summary">Tweaks specific to system notifications</string>
     <string name="dev_options_title">Developer options items</string>
+    <string name="gestures_title">Gestures</string>
+    <string name="gestures_summary">Make your device smart with some Gestures</string>
+
     <!-- Lockscreen -->
     <string name="fingerprint_prefs_title">Fingerprint prefs</string>
     <string name="fingerprint_prefs_summary">Tweaks specific to the fingerprint scanner</string>
