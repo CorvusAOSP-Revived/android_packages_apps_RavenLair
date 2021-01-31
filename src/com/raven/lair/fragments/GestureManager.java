@@ -36,7 +36,7 @@ import com.android.settings.Utils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Gestures extends SettingsPreferenceFragment
+public class GestureManager extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String KEY_TORCH_LONG_PRESS_POWER_TIMEOUT =
@@ -47,7 +47,7 @@ public class Gestures extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.gestures);
+        addPreferencesFromResource(R.xml.gesture_manager);
 
         mTorchLongPressPowerTimeout = findPreference(KEY_TORCH_LONG_PRESS_POWER_TIMEOUT);
         mTorchLongPressPowerTimeout.setOnPreferenceChangeListener(this);
@@ -86,7 +86,7 @@ public class Gestures extends SettingsPreferenceFragment
                         boolean enabled) {
                     final ArrayList<SearchIndexableResource> result = new ArrayList<>();
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.gestures;
+                    sir.xmlResId = R.xml.gesture_manager;
                     result.add(sir);
                     return result;
                 }
