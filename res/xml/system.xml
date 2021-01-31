@@ -16,6 +16,10 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <Preference
+        android:key="system_animation"
+        android:layout="@layout/system_animation" />
+
     <com.raven.lair.preferences.CategoryPreference
         android:key="notifications_category"
         android:icon="@drawable/dt_notifications"
