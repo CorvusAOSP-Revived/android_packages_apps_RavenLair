@@ -58,10 +58,13 @@
     <string name="powermenu_summary">Configure the power menu</string>
     <string name="notifications_title">Notifications</string>
     <string name="notifications_summary">Tweaks specific to system notifications</string>
+    <string name="misc_notifications">Misc Notifications Settings</string>
     <string name="dev_options_title">Developer options items</string>
     <string name="gestures_title">Gestures</string>
     <string name="gestures_summary">Make your device smart with some Gestures</string>
     <string name="statusbar_gestures">Statusbar Gestures</string>
+    <string name="misc_gestures">Misc Gestures</string>
+    <string name="lockscreen_gestures">Lockscreen Gestures</string>
 
     <!-- Lockscreen -->
     <string name="fingerprint_prefs_title">Fingerprint prefs</string>

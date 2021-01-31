@@ -21,18 +21,6 @@
     <PreferenceCategory
         android:title="@string/switch_category">
 
-    <com.corvus.support.preferences.SystemSettingSwitchPreference
-        android:key="double_tap_sleep_gesture"
-        android:title="@string/double_tap_sleep_gesture_title"
-        android:summary="@string/double_tap_sleep_gesture_summary"
-        android:defaultValue="false" />
-
-    <com.corvus.support.preferences.SecureSettingSwitchPreference
-            android:key="doze_pulse_on_double_tap"
-            android:title="@string/double_tap_on_doze_to_wake_title"
-            android:summary="@string/double_tap_on_doze_to_wake_summary"
-            android:defaultValue="true" />
-
      <!-- Launch music player when headset is connected -->
     <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:key="headset_connect_player"
