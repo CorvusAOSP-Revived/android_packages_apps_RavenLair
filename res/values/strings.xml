@@ -16,7 +16,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Dirty Tweaks -->
+    <!-- Raven Lair -->
     <string name="ravenlair_title">Raven\'s Lair</string>
     <string name="ravenlair_summary">Unleash the Raven</string>
 
@@ -573,5 +573,9 @@
      <!-- Brightness control -->
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
+
+    <!-- Volume Button Music Control -->
+    <string name="volume_rocker_music_controls_title">Music control</string>
+    <string name="volume_rocker_music_controls_summary">Long press volume buttons to switch tracks while screen off</string>
 </resources>
 
