@@ -79,6 +79,36 @@
         <item>13</item>
     </string-array>
 
+   <string-array name="ambient_notification_light_timeout_entries" translatable="false">
+        <item>@string/entry_infinite</item>
+        <item>@string/entry_five_minute</item>
+        <item>@string/entry_ten_minute</item>
+        <item>@string/entry_fifteen_minute</item>
+        <item>@string/entry_thirty_minute</item>
+        <item>@string/entry_sixty_minute</item>
+    </string-array>
+
+    <string-array name="ambient_notification_light_timeout_values" translatable="false">
+        <item>0</item>
+        <item>300</item>
+        <item>600</item>
+        <item>900</item>
+        <item>1800</item>
+        <item>3600</item>
+    </string-array>
+
+    <string-array name="ambient_notification_light_color_mode_entries" translatable="false">
+        <item>@string/ambient_notification_light_color_mode_automatic</item>
+        <item>@string/ambient_notification_light_color_mode_accent</item>
+        <item>@string/ambient_notification_light_color_mode_custom</item>
+    </string-array>
+
+    <string-array name="ambient_notification_light_color_mode_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
    <string-array name="status_bar_battery_style_entries" translatable="false">
         <item>@string/status_bar_battery_style_icon_portrait</item>
         <!--<item>@string/status_bar_battery_style_q</item>-->	
@@ -463,7 +493,6 @@
         <item>@string/torch_long_press_power_timeout_10min</item>
     </string-array>
 
-
     <!-- FOD Recognizing fingerprint animations -->
     <string-array  name="fod_recog_animation_entries" translatable="false">
         <item>@string/fod_recog_animation_miui_normal</item>
@@ -551,6 +580,7 @@
       <item>1</item>
       <item>2</item>
     </string-array>
+
      <!-- Wired headset ringtone audio focus -->
     <string-array name="ringtone_focus_mode_entries">
         <item>@string/ringtone_focus_mode_dynamic</item>

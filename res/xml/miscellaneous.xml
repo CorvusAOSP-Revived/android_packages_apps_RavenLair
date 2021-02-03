@@ -21,7 +21,14 @@
     <PreferenceCategory
         android:title="@string/switch_category">
 
-     <!-- Screenshot Sound  -->
+    <!-- Launch music player when headset is connected -->
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="headset_connect_player"
+        android:title="@string/headset_connect_player_title"
+        android:summary="@string/headset_connect_player_summary"
+        android:defaultValue="false" />
+
+    <!-- Screenshot Sound  -->
     <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:key="screenshot_sound"
         android:title="@string/screenshot_sound_title"
@@ -85,6 +92,13 @@
             android:entries="@array/ringtone_focus_mode_entries"
             android:entryValues="@array/ringtone_focus_mode_values" />
 
+     <Preference
+            android:title="@string/radio_info_title"
+            android:key="radio_info_settings">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.phone"
+                android:targetClass="com.android.phone.settings.RadioInfo" />
+        </Preference>
     </PreferenceCategory>
 
     <PreferenceCategory
