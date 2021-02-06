@@ -509,7 +509,7 @@
     <!-- Headset ringtone audio focus -->
     <string name="ringtone_focus_mode_title">De onde tocar toques</string>
     <string name="ringtone_focus_mode_dynamic">Do fone de ouvido, se conectado e reproduzindo música</string>
-    <string name="ringtone_focus_mode_stock">"No viva-voz (padrão AOSP)"</string>
+    <string name="ringtone_focus_mode_stock">No viva-voz (padrão AOSP)</string>
 
     <!-- Heads up options -->
     <string name="less_boring_heads_up_title">Discador HeadsUp</string>
