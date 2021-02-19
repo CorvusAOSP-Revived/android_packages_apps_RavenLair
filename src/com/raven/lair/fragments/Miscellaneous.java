@@ -46,7 +46,6 @@ public class Miscellaneous extends SettingsPreferenceFragment
     private static final String PREF_TILE_ANIM_STYLE = "qs_tile_animation_style";
     private static final String PREF_TILE_ANIM_DURATION = "qs_tile_animation_duration";
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
-    private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
     private static final String RINGTONE_FOCUS_MODE = "ringtone_focus_mode";
     private static final String PREF_KEY_CUTOUT = "cutout_settings";
 
@@ -54,7 +53,6 @@ public class Miscellaneous extends SettingsPreferenceFragment
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
     private ListPreference mTileAnimationInterpolator;
-    private SystemSettingMasterSwitchPreference mGamingMode;
 
 
     public static void reset(Context mContext) {
@@ -67,11 +65,6 @@ public class Miscellaneous extends SettingsPreferenceFragment
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.miscellaneous);
-
-        mGamingMode = (SystemSettingMasterSwitchPreference) findPreference(GAMING_MODE_ENABLED);
-        mGamingMode.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.GAMING_MODE_ENABLED, 0) == 1));
-        mGamingMode.setOnPreferenceChangeListener(this);
 
         final ContentResolver resolver = getActivity().getContentResolver();
 
@@ -137,11 +130,6 @@ public class Miscellaneous extends SettingsPreferenceFragment
             Settings.System.putIntForUser(resolver, Settings.System.ANIM_TILE_INTERPOLATOR,
                     tileAnimationInterpolator, UserHandle.USER_CURRENT);
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
-            return true;
-        }   else if (preference == mGamingMode) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.GAMING_MODE_ENABLED, value ? 1 : 0);
             return true;
         }
         return false;
