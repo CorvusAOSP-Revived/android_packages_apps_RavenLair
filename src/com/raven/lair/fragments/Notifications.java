@@ -32,6 +32,9 @@ import com.android.settingslib.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
+import com.corvus.support.preferences.CustomSeekBarPreference;
+import com.corvus.support.preferences.GlobalSettingMasterSwitchPreference;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,14 +42,24 @@ public class Notifications extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String KEY_CHARGING_LIGHT = "charging_light";
+    private static final String HEADS_UP_NOTIFICATIONS_ENABLED = "heads_up_notifications_enabled";
 
     private Preference mChargingLeds;
+    private GlobalSettingMasterSwitchPreference mHeadsUpEnabled;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.notifications);
         PreferenceScreen prefScreen = getPreferenceScreen();
+
+        final ContentResolver resolver = getActivity().getContentResolver();
+
+        mHeadsUpEnabled = (GlobalSettingMasterSwitchPreference) findPreference(HEADS_UP_NOTIFICATIONS_ENABLED);
+        mHeadsUpEnabled.setOnPreferenceChangeListener(this);
+        int headsUpEnabled = Settings.Global.getInt(getContentResolver(),
+                HEADS_UP_NOTIFICATIONS_ENABLED, 1);
+        mHeadsUpEnabled.setChecked(headsUpEnabled != 0);
 
         mChargingLeds = findPreference(KEY_CHARGING_LIGHT);
         if (mChargingLeds != null
@@ -57,7 +70,18 @@ public class Notifications extends SettingsPreferenceFragment
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mHeadsUpEnabled) {
+            boolean value = (Boolean) newValue;
+            Settings.Global.putInt(getContentResolver(),
+		            HEADS_UP_NOTIFICATIONS_ENABLED, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 
