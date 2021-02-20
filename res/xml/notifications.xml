@@ -32,7 +32,18 @@
             android:title="@string/battery_light_settings"
             android:summary="@string/battery_light_summary"
             android:fragment="com.raven.lair.fragments.BatteryLightSettings" />
+    </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="notification_stat"
+        android:title="@string/notification_stat">
+
+        <com.corvus.support.preferences.GlobalSettingMasterSwitchPreference
+            android:key="heads_up_notifications_enabled"
+            android:fragment="com.raven.lair.fragments.HeadsUp"
+            android:title="@string/heads_up_notifications"
+            android:summary="@string/heads_up_notifications_summary"
+            android:defaultValue="true" />
     </PreferenceCategory>
 
         <com.corvus.support.preferences.SystemSettingSwitchPreference
