@@ -60,9 +60,9 @@ public class TeamActivity extends Activity {
        setTeamMember("Zeeshan", getString(R.string.core_developer_title)
                 + " / " + getString(R.string.maintainer_title), "Zaviyar786", "NAHSEEZ", 
                 R.drawable.zeeshan);
-       setTeamMember("Aashil", getString(R.string.core_developer_title)
-                + " / " + getString(R.string.maintainer_title), "aashil123", "tempyourdaddy",
-                R.drawable.ashil);
+       setTeamMember("Trishiraj", getString(R.string.core_developer_title)
+                + " / " + getString(R.string.maintainer_title), "StarkDroid", "ZuijinR6",
+                R.drawable.trishiraj);
         setTeamMember("Victor", getString(R.string.manager_title)
                 + " / " + getString(R.string.maintainer_title), "merser2005", "victor10520",
                 R.drawable.merser);
@@ -84,8 +84,6 @@ public class TeamActivity extends Activity {
                 R.drawable.alex);
         setTeamMember("mrjarvis698", getString(R.string.maintainer_title), "MrJarvis698", "mrjarvis698",
                 R.drawable.jarvis);
-        setTeamMember("Trishiraj", getString(R.string.maintainer_title), "StarkDroid", "ZuijinR6",
-                R.drawable.trishiraj);
         setTeamMember("Kunmun", getString(R.string.maintainer_title), "Curious-To-Learn", "Curious_To_Learn",
                 R.drawable.kunmun);
         setTeamMember("Chandu", getString(R.string.maintainer_title), "chandu078", "Chandu078",
