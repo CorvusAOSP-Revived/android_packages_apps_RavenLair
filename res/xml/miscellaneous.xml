@@ -28,12 +28,13 @@
         android:summary="@string/headset_connect_player_summary"
         android:defaultValue="false" />
 
-     <!-- Screenshot Sound  -->
-    <com.corvus.support.preferences.SystemSettingSwitchPreference
-        android:key="screenshot_sound"
-        android:title="@string/screenshot_sound_title"
-        android:summary="@string/screenshot_sound_summary"
-        android:defaultValue="true" />
+    <!-- Gaming Mode -->
+    <com.corvus.support.preferences.SystemSettingMasterSwitchPreference
+        android:key="gaming_mode_enabled"
+        android:fragment="com.raven.lair.fragments.GamingMode"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary"
+        android:defaultValue="false" />
 
 	<Preference
             android:key="systemui_tuner_statusbar"
