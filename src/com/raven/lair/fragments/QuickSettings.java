@@ -88,9 +88,9 @@ public class QuickSettings extends SettingsPreferenceFragment
         if (footerString != null && footerString != "")
             mFooterString.setText(footerString);
         else {
-            mFooterString.setText("#StayFlocked");
+            mFooterString.setText("#TheRavens");
             Settings.System.putString(getActivity().getContentResolver(),
-                    Settings.System.QS_FOOTER_TEXT_STRING, "#StayFlocked");
+                    Settings.System.QS_FOOTER_TEXT_STRING, "#TheRavens");
         }
 
     }
@@ -109,9 +109,9 @@ public class QuickSettings extends SettingsPreferenceFragment
                 Settings.System.putString(getActivity().getContentResolver(),
                         Settings.System.QS_FOOTER_TEXT_STRING, value);
             else {
-                mFooterString.setText("#StayFlocked");
+                mFooterString.setText("#TheRavens");
                 Settings.System.putString(getActivity().getContentResolver(),
-                        Settings.System.QS_FOOTER_TEXT_STRING, "#StayFlocked");
+                        Settings.System.QS_FOOTER_TEXT_STRING, "#TheRavens");
             }
             return true;
         }
