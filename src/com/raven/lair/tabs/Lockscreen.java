@@ -46,10 +46,8 @@ public class Lockscreen extends SettingsPreferenceFragment
         }
 
         Preference FingerprintPrefs = findPreference(FINGERPRINT_PREFS_CATEGORY);
-        if (!getResources().getBoolean(R.bool.has_fingerprint_prefs)) {
-            getPreferenceScreen().removePreference(FingerprintPrefs);
-        } else {
-            if (!Utils.hasFingerprintSupport(getContext())) {
+        if (!getResources().getBoolean(R.bool.has_fingerprint_prefs) || !Utils.hasFingerprintSupport(getContext())) {
+            if (FingerprintPrefs != null) {
                 getPreferenceScreen().removePreference(FingerprintPrefs);
             }
         }

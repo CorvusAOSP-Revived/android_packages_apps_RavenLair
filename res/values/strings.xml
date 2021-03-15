@@ -562,7 +562,7 @@
     <string name="ringtone_focus_mode_dynamic">From headset if connected and playing music</string>
     <string name="ringtone_focus_mode_stock">"From speakerphone (AOSP default)"</string>
 
-     <!-- Brightness control -->
+    <!-- Brightness control -->
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 
