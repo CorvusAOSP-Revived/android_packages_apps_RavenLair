@@ -30,10 +30,10 @@
 
     <!-- Gaming Mode -->
     <com.corvus.support.preferences.SystemSettingMasterSwitchPreference
-        android:key="gaming_mode_enabled"
-        android:fragment="com.raven.lair.fragments.GamingMode"
-        android:title="@string/gaming_mode_title"
-        android:summary="@string/gaming_mode_summary"
+        android:key="gaming_category"
+        android:fragment="com.raven.lair.fragments.GamingModeSettings"
+        android:title="@string/gaming_title"
+        android:summary="@string/gaming_title_summary"
         android:defaultValue="false" />
 
     <PreferenceScreen
