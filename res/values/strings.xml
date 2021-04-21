@@ -151,10 +151,6 @@
     <string name="double_tap_sleep_gesture_title">Double tap to sleep on statusbar</string>
     <string name="double_tap_sleep_gesture_summary">Double tap on the status bar to put the device to sleep</string>
 
-    <!-- Double Tap on Doze to wake -->
-    <string name="double_tap_on_doze_to_wake_title">Double-tap to wake on doze</string>
-    <string name="double_tap_on_doze_to_wake_summary">Double tap to wake when device is dreaming</string>
-
     <!-- Battery Bar -->
     <string name="battery_bar_title">Battery bar</string>
     <string name="battery_bar_summary">Display and customize battery bar near status bar or navigation bar</string>
@@ -609,10 +605,6 @@
     <string name="headset_connect_player_summary">Launch the default music app when headset is connected</string>
 
     <string name="radio_info_title">Radio info</string>
-
-    <!-- Doze on charge -->
-    <string name="doze_on_charge_title">Always on when charging</string>
-    <string name="doze_on_charge_summary">Show doze screen all the time when charging</string>
 
     <!-- Clipboard toast toggle -->
     <string name="show_clipboard_toast">Show clipboard access alerts</string>

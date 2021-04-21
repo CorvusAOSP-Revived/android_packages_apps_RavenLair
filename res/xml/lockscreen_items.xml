@@ -22,12 +22,6 @@
         android:title="@string/switch_settings_title" >
 
     <com.corvus.support.preferences.SystemSettingSwitchPreference
-        android:key="doze_on_charge"
-        android:defaultValue="false"
-        android:title="@string/doze_on_charge_title"
-        android:summary="@string/doze_on_charge_summary" />
-
-    <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:key="lockscreen_translucent_notifications_bg_enabled"
         android:title="@string/translucent_lockscreen_notifications_bg_title"
         android:summary="@string/translucent_lockscreen_notifications_bg_summary"
