@@ -38,15 +38,23 @@
         android:key="notification_stat"
         android:title="@string/notification_stat">
 
-        <com.corvus.support.preferences.GlobalSettingMasterSwitchPreference
-            android:key="heads_up_notifications_enabled"
-            android:fragment="com.raven.lair.fragments.HeadsUp"
-            android:title="@string/heads_up_notifications"
-            android:summary="@string/heads_up_notifications_summary"
-            android:defaultValue="true" />
+    <com.corvus.support.preferences.SystemSettingSeekBarPreference
+        android:key="notification_bg_alpha"
+        android:title="@string/notification_alpha_title"
+        android:defaultValue="255"
+        android:max="255"
+        settings:min="0"
+        settings:units="" />
 
-	<com.corvus.support.preferences.SystemSettingSwitchPreference
-	    android:key="status_bar_notif_count"
+    <com.corvus.support.preferences.GlobalSettingMasterSwitchPreference
+        android:key="heads_up_notifications_enabled"
+        android:fragment="com.raven.lair.fragments.HeadsUp"
+        android:title="@string/heads_up_notifications"
+        android:summary="@string/heads_up_notifications_summary"
+        android:defaultValue="true" />
+
+	    <com.corvus.support.preferences.SystemSettingSwitchPreference
+	        android:key="status_bar_notif_count"
             android:title="@string/notif_count_title"
             android:summary="@string/notif_count_summary"
             android:defaultValue="false" />
@@ -65,7 +73,7 @@
             android:defaultValue="false" />
    </PreferenceCategory>
 
-	<com.corvus.support.preferences.SystemSettingSwitchPreference
+	    <com.corvus.support.preferences.SystemSettingSwitchPreference
             android:key="notification_headers"
             android:title="@string/notification_headers_title"
             android:summary="@string/notification_headers_summary"
