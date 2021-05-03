@@ -100,12 +100,24 @@
         android:defaultValue="true" />
 
            <!-- QS media player -->
-    <com.corvus.support.preferences.SystemSettingSwitchPreference
-        android:key="qs_media_player"
-        android:title="@string/qs_media_player_title"
-        android:summaryOn="@string/qs_media_player_summary_on"
-        android:summaryOff="@string/qs_media_player_summary_off"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:key="media_category"
+        android:title="@string/media_category" >
+
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:key="artwork_media_background"
+            android:title="@string/artwork_media_background_title"
+            android:summary="@string/artwork_media_background_summary"
+            android:defaultValue="true" />
+
+	<com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:key="qs_media_player"
+            android:title="@string/qs_media_player_title"
+            android:summaryOn="@string/qs_media_player_summary_on"
+            android:summaryOff="@string/qs_media_player_summary_off"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
 
     <com.corvus.support.preferences.SecureSettingSwitchPreference
 	android:key="quick_settings_vibrate"

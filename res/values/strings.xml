@@ -650,5 +650,10 @@
     <!-- StatusBar notification count -->
     <string name="notif_count_title">Notification count</string>
     <string name="notif_count_summary">Show notification count near notfication icons</string>
+
+    <!-- Notification Media Options -->
+    <string name="media_category">QS Media options</string>
+    <string name="artwork_media_background_title">Artwork media background</string>
+    <string name="artwork_media_background_summary">Set media artwork as notification media background</string>
 </resources>
 
