@@ -29,9 +29,10 @@ import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
 
 import com.corvus.support.preferences.SystemSettingListPreference;
+import com.corvus.support.preferences.SystemSettingSeekBarPreference;
+import com.raven.lair.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,10 +40,20 @@ import java.util.List;
 public class LockscreenItems extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
+    private static final String KEY_LOCKSCREEN_BLUR = "lockscreen_blur";
+    private Context mContext;
+    private SystemSettingSeekBarPreference mLockscreenBlur;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.lockscreen_items);
+	PreferenceScreen prefScreen = getPreferenceScreen();
+
+	mLockscreenBlur = (SystemSettingSeekBarPreference) findPreference(KEY_LOCKSCREEN_BLUR);
+        if (!Utils.isBlurSupported()) {
+            prefScreen.removePreference(mLockscreenBlur);
+        }
     }
 
     @Override
