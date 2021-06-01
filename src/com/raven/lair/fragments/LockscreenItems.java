@@ -23,6 +23,8 @@ import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import androidx.preference.*;
+import android.app.WallpaperManager;
+import android.os.ParcelFileDescriptor;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -50,8 +52,10 @@ public class LockscreenItems extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.lockscreen_items);
 	PreferenceScreen prefScreen = getPreferenceScreen();
 
+	WallpaperManager manager = WallpaperManager.getInstance(mContext);
+	ParcelFileDescriptor pfd = manager.getWallpaperFile(WallpaperManager.FLAG_LOCK);
 	mLockscreenBlur = (SystemSettingSeekBarPreference) findPreference(KEY_LOCKSCREEN_BLUR);
-        if (!Utils.isBlurSupported()) {
+        if (!Utils.isBlurSupported() || pfd != null) {
             prefScreen.removePreference(mLockscreenBlur);
         }
     }
