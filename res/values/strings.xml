@@ -681,5 +681,6 @@
 
     <!-- Lockscreen blur -->
     <string name="lockscreen_blur_title">Background blur</string>
+    <string name="lockscreen_blur_disabled">Lock screen Blur cannot be enabled if your lock screen wallpaper does not match your home screen, or your device does not support Blur.</string>
 </resources>
 
