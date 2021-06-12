@@ -52,10 +52,31 @@
             android:summary="@string/notification_headers_summary"
             android:defaultValue="true" />
 
-	<com.corvus.support.preferences.SystemSettingSwitchPreference
+	      <com.corvus.support.preferences.SystemSettingSwitchPreference
             android:key="center_notification_headers"
             android:title="@string/center_notification_headers_title"
             android:summary="@string/center_notification_headers_summary"
             android:dependency="notification_headers"
             android:defaultValue="true" />
+            
+     <PreferenceCategory
+        android:key="reticker"
+        android:title="@string/reticker_category" >
+
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:key="reticker_status"
+            android:title="@string/reticker_title"
+            android:summary="@string/reticker_summary"
+            android:order="9"
+            android:defaultValue="false" />
+
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:dependency="reticker_status"
+            android:key="reticker_colored"
+            android:title="@string/reticker_colored_title"
+            android:summary="@string/reticker_colored_summary"
+            android:order="10"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+    
 </PreferenceScreen>
