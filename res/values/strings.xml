@@ -663,6 +663,7 @@
 
     <!-- AOKP custom system animations -->
     <string name="animation_settings_title">Animations</string>
+    <string name="animation_settings_summary">System Wide Animation Options</string>
     <string name="animation_title">Animations</string>  
     <string name="system_animation_title">System Animations</string>
     <string name="activity_open_title">Activity open animation</string>
