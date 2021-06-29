@@ -646,7 +646,6 @@
     <string name="qqs_brightness_slider_title">QQS brightness slider</string>
     <string name="qs_brightness_slider_hide">Hide</string>
     <string name="qs_brightness_slider_bottom">Bottom</string>
-    <string name="qs_brightness_slider_top">Top</string>
 
     <!-- StatusBar notification count -->
     <string name="notif_count_title">Notification count</string>
