@@ -44,27 +44,17 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
 import com.corvus.support.preferences.CustomSeekBarPreference;
-import com.corvus.support.preferences.SystemSettingMasterSwitchPreference;
 import com.corvus.support.preferences.SystemSettingEditTextPreference;
-
-
 
 import java.util.ArrayList;
 import java.util.List;
 
-    
-
 public class QuickSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
-
-    private static final String BRIGHTNESS_SLIDER = "qs_show_brightness";
-
-    private SystemSettingMasterSwitchPreference mBrightnessSlider;
 
      private static final String QS_FOOTER_TEXT_STRING = "qs_footer_text_string";
 
     private SystemSettingEditTextPreference mFooterString;
-
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -73,13 +63,6 @@ public class QuickSettings extends SettingsPreferenceFragment
         PreferenceScreen prefSet = getPreferenceScreen();
 
         final ContentResolver resolver = getActivity().getContentResolver();
-
-        mBrightnessSlider = (SystemSettingMasterSwitchPreference)
-                findPreference(BRIGHTNESS_SLIDER);
-        mBrightnessSlider.setOnPreferenceChangeListener(this);
-        boolean enabled = Settings.System.getInt(resolver,
-                BRIGHTNESS_SLIDER, 1) == 1;
-        mBrightnessSlider.setChecked(enabled);
 
        mFooterString = (SystemSettingEditTextPreference) findPreference(QS_FOOTER_TEXT_STRING);
         mFooterString.setOnPreferenceChangeListener(this);
@@ -92,18 +75,12 @@ public class QuickSettings extends SettingsPreferenceFragment
             Settings.System.putString(getActivity().getContentResolver(),
                     Settings.System.QS_FOOTER_TEXT_STRING, "#TheRavens");
         }
-
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mBrightnessSlider) {
-            Boolean value = (Boolean) newValue;
-            Settings.System.putInt(resolver,
-                    BRIGHTNESS_SLIDER, value ? 1 : 0);
-            return true;
-        }else if (preference == mFooterString) {
+        if (preference == mFooterString) {
             String value = (String) newValue;
             if (value != "" && value != null)
                 Settings.System.putString(getActivity().getContentResolver(),
