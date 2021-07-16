@@ -555,7 +555,7 @@
     <string name="show_clipboard_toast_summary">Display a toast when an app tries to access the clipboard</string>
 
     <!-- Heads up -->
-    <string name="notification_stat">Statusbar</string>
+    <string name="notification_stat">Notification Settings</string>
     <string name="heads_up_notifications">Heads Up</string>
     <string name="heads_up_notifications_summary">Pop up statusbar notifications</string>
     <string name="add_heads_up_package">Add app</string>
@@ -652,7 +652,7 @@
     <string name="notif_count_summary">Show notification count near notfication icons</string>
 
     <!-- Notification Media Options -->
-    <string name="media_category">QS Media options</string>
+    <string name="qs_media_category">QS Media options</string>
     <string name="artwork_media_background_title">Artwork media background</string>
     <string name="artwork_media_background_summary">Set media artwork as notification media background</string>
 
@@ -692,5 +692,9 @@
     <!-- Partial Screenshot -->
     <string name="click_partial_screenshot_title">Click to partial screenshot</string>
     <string name="click_partial_screenshot_summary">Short click Volume Down and Power to take partial screenshot</string>
+
+    <!-- QS Category -->
+    <string name="qs_header_category">QS Header</string>
+    <string name="qs_footer_category">QS Footer</string>
 </resources>
 
