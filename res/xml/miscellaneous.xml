@@ -49,13 +49,6 @@
             android:defaultValue="0" />
     </PreferenceCategory>
 
-    <Preference
-        android:key="display_cutout_force_fullscreen_settings"
-        android:title="@string/display_cutout_force_fullscreen_title"
-        android:summary="@string/display_cutout_force_fullscreen_summary"
-        android:fragment="com.raven.lair.fragments.DisplayCutoutForceFullscreenSettings"
-        settings:controller="com.raven.lair.fragments.DisplayCutoutForceFullscreenPreferenceController" />
-
     <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
@@ -133,5 +126,4 @@
         android:title="@string/show_clipboard_toast"
         android:summary="@string/show_clipboard_toast_summary"
         android:defaultValue="false" />
-
 </PreferenceScreen>
