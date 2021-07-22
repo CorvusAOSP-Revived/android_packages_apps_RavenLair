@@ -480,7 +480,7 @@
     <string name="theming_settings_dashboard_icons_plain">Plain</string>
     <string name="theming_settings_dashboard_icons_plain_accent">Plain accent</string>
 
-    <!--FOD -->
+    <!--FOD icons -->
     <string name="fod_icon_picker_category_title">FOD customization options</string>
     <string name="fod_icon_picker_title">FOD icon picker</string>
     <string name="fod_icon_picker_summary">Pick your favourite fingerprint icon</string>
@@ -488,7 +488,15 @@
     <string name="fod_wallpaper_color">Use wallpaper color for FOD icon</string>
     <string name="fod_wallpaper_color_summary">Uses adjusted primary wallpaper color for FOD icon\nNOTE: might look good only with some wallpapers</string>
 
-    <!-- FOD animations -->
+    <!-- FOD icon animation -->
+    <string name="fod_icon_animation_summary">Animate the FOD icon while turning on the screen</string>
+    <string name="fod_icon_animation_effect_title">Select the FOD icon animation effect</string>
+    <string name="fod_icon_animation">Animated FOD icon</string>
+    <string name="fod_icon_animation_miui_aod">Xiaomi MIUI</string>
+    <string name="fod_icon_animation_zaid_oneui">Samsung OneUI 3</string>
+    <string name="fod_icon_animation_oneui2">Samsung OneUI 2</string>
+
+    <!-- FOD Animations -->
     <string name="fod_recog_animation">Fingerprint animation</string>
     <string name="fod_recog_animation_summary">Shows an animation while reading your finger</string>
     <string name="fod_recog_animation_effect_title">Select fingerprint animation effect</string>
