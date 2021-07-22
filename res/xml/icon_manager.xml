@@ -73,4 +73,10 @@
         android:summary="@string/roaming_indicator_icon_summary"
         android:defaultValue="true"/>
 
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="statusbar_icons_style"
+        android:title="@string/statusbar_icons_style"
+        android:summary="@string/statusbar_icons_style_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
