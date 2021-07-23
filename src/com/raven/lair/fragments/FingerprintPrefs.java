@@ -40,11 +40,9 @@ public class FingerprintPrefs extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
-    private static final String FOD_GESTURE = "fod_gesture";
     private static final String FOD_NIGHT_LIGHT = "fod_night_light";
 
     private PreferenceCategory mFODIconPickerCategory;
-    private Preference mScreenOffFOD;
     private Preference mFODnightlight;
 
     @Override
@@ -58,12 +56,6 @@ public class FingerprintPrefs extends SettingsPreferenceFragment
         if (!FodUtils.hasFodSupport(getContext())) {
             prefScreen.removePreference(mFODIconPickerCategory);
         } else {
-            mScreenOffFOD = (Preference) findPreference(FOD_GESTURE);
-            final boolean isScreenOffFodSupported = mContext.getResources().getBoolean(
-                    R.bool.config_supportScreenOffFod);
-            if (!isScreenOffFodSupported) {
-                mFODIconPickerCategory.removePreference(mScreenOffFOD);
-        }
             mFODnightlight = (Preference) findPreference(FOD_NIGHT_LIGHT);
             final boolean isFodNightLightSupported = mContext.getResources().getBoolean(
                     com.android.internal.R.bool.disable_fod_night_light);
