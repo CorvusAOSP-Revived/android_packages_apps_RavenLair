@@ -21,7 +21,7 @@
     <PreferenceCategory
         android:title="@string/switch_category">
 
-     <!-- Launch music player when headset is connected -->
+    <!-- Launch music player when headset is connected -->
     <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:key="headset_connect_player"
         android:title="@string/headset_connect_player_title"
@@ -98,7 +98,6 @@
                 android:targetPackage="com.android.phone"
                 android:targetClass="com.android.phone.settings.RadioInfo" />
         </Preference>
-
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -108,6 +107,7 @@
        <Preference
             android:key="animations_category"
             android:title="@string/animation_settings_title"
+            android:icon="@drawable/ic_settings_animation"
             android:summary="@string/animation_settings_summary"
             android:fragment="com.raven.lair.fragments.AnimationSettings" />
 

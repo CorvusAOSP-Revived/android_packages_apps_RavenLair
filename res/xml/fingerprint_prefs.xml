@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2017-2019 The Dirty Unicorns Project
+     Copyright (C) 2020-2021 CorvusROM
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -17,6 +18,93 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
             android:title="@string/fingerprint_prefs_title" >
+
+    <!-- FOD customization options -->
+    <PreferenceCategory
+        android:key="fod_icon_picker"
+        android:title="@string/fod_icon_picker_category_title">
+
+        <!-- FOD icon picker -->
+        <Preference
+            android:key="fod_icon_picker_category"
+            android:title="@string/fod_icon_picker_title"
+            android:summary="@string/fod_icon_picker_summary"
+            android:fragment="com.raven.lair.fragments.FODIconPickerFragment" />
+        
+        <!-- Screen Off FOD
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:key="fod_gesture"
+            android:title="@string/fod_gesture_title"
+            android:summary="@string/fod_gesture_summary"
+            android:defaultValue="false"
+            settings:controller="com.android.settings.security.screenlock.ScreenOffFodPreferenceController" -->
+
+        <!-- FOD pressed color -->
+        <com.corvus.support.preferences.SystemSettingListPreference
+            android:key="fod_color"
+            android:dialogTitle="@string/fod_pressed_color_title"
+            android:title="@string/fod_pressed_color_title"
+            android:summary="%s"
+            android:entries="@array/fod_pressed_color_entries"
+            android:entryValues="@array/fod_pressed_color_values"
+            android:defaultValue="@*android:integer/config_fod_pressed_color" />
+
+        <!-- FOD recognizing animation -->
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:key="fod_recognizing_animation"
+            android:title="@string/fod_recog_animation"
+            android:summary="@string/fod_recog_animation_summary"
+            android:defaultValue="false" />
+
+        <com.corvus.support.preferences.SystemSettingListPreference
+            android:key="fod_anim"
+            android:title="@string/fod_recog_animation_effect_title"
+            android:summary="%s"
+            android:entries="@array/fod_recog_animation_entries"
+            android:entryValues="@array/fod_recog_animation_values"
+            android:defaultValue="0"
+            android:dependency="fod_recognizing_animation" />
+
+        <!-- FOD Nightlight -->
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:key="fod_night_light"
+            android:title="@string/fod_night_light_title"
+            android:summary="@string/fod_night_light_summary"
+            android:defaultValue="@*android:bool/disable_fod_night_light" />
+
+        <!-- FOD Icon Animations -->
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:key="fod_icon_animation"
+            android:title="@string/fod_icon_animation"
+            android:summary="@string/fod_icon_animation_summary"
+            android:defaultValue="false" />
+
+        <!-- FOD Icon Animation Picker -->
+        <com.corvus.support.preferences.SystemSettingListPreference
+            android:key="fod_icon_anim_type"
+            android:title="@string/fod_icon_animation_effect_title"
+            android:summary="%s"
+            android:entries="@array/fod_icon_animation_entries"
+            android:entryValues="@array/fod_icon_animation_values"
+            android:defaultValue="0"
+            android:dependency="fod_icon_animation" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/fingerprint_title" >
+
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+	android:key="fingerprint_success_vib"
+        android:title="@string/fprint_sucess_vib_title"
+        android:summary="@string/fprint_sucess_vib_summary"
+        android:defaultValue="true" />
+
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+	android:key="fingerprint_error_vib"
+        android:title="@string/fprint_error_vib_title"
+        android:summary="@string/fprint_error_vib_summary"
+        android:defaultValue="true" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
 

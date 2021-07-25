@@ -26,6 +26,7 @@ import androidx.preference.*;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import com.android.internal.util.corvus.FodUtils;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
@@ -38,10 +39,30 @@ import java.util.List;
 public class FingerprintPrefs extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
+    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
+    private static final String FOD_NIGHT_LIGHT = "fod_night_light";
+
+    private PreferenceCategory mFODIconPickerCategory;
+    private Preference mFODnightlight;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.fingerprint_prefs);
+        PreferenceScreen prefScreen = getPreferenceScreen();
+        Context mContext = getContext();
+
+        mFODIconPickerCategory = findPreference(FOD_ICON_PICKER_CATEGORY);
+        if (!FodUtils.hasFodSupport(getContext())) {
+            prefScreen.removePreference(mFODIconPickerCategory);
+        } else {
+            mFODnightlight = (Preference) findPreference(FOD_NIGHT_LIGHT);
+            final boolean isFodNightLightSupported = mContext.getResources().getBoolean(
+                    com.android.internal.R.bool.disable_fod_night_light);
+            if (!isFodNightLightSupported) {
+                mFODIconPickerCategory.removePreference(mFODnightlight);
+            }
+        }
     }
 
     @Override
