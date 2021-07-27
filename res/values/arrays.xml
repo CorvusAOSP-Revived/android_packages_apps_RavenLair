@@ -778,6 +778,7 @@
 
     <!-- Volume Panel -->
     <string-array name="volume_panel_entries">
+        <item>@string/audio_panel_theme_default</item>
         <item>@string/volume_panel_aosp</item>
         <item>@string/volume_panel_compact</item>
         <item>@string/volume_panel_oreo</item>
@@ -789,6 +790,7 @@
     </string-array>
 
     <string-array name="volume_panel_values" translatable="false">
+        <item>@string/volume_panel_stock_val</item>
         <item>@string/volume_panel_aosp_val</item>
         <item>@string/volume_panel_compact_val</item>
         <item>@string/volume_panel_oreo_val</item>
@@ -797,4 +799,5 @@
         <item>@string/volume_panel_oos_val</item>
         <item>@string/volume_panel_p404_val</item>
         <item>@string/volume_panel_ssos_val</item>
+    </string-array>
 </resources>
