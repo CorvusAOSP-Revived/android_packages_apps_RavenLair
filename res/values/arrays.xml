@@ -478,12 +478,16 @@
         <item>@string/theming_settings_dashboard_icons_default_accent2</item> 
         <item>@string/theming_settings_dashboard_icons_plain</item> 
         <item>@string/theming_settings_dashboard_icons_plain_accent</item>
+	<item>@string/theming_settings_dashboard_icons_corvusify</item>
+	<item>@string/theming_settings_dashboard_icons_material</item>	
     </string-array>
     <string-array name="theming_settings_dashboard_icons_values" translatable="false">
         <item>0</item> 
         <item>1</item> 
         <item>2</item>
         <item>3</item>
+	<item>4</item>
+	<item>5</item>
     </string-array>
      <string-array name="torch_long_press_power_timeout_entries" translatable="false">
         <item>@string/torch_long_press_power_timeout_never</item>

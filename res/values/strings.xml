@@ -473,6 +473,8 @@
     <string name="theming_settings_dashboard_icons_default_accent2">Accent background</string>
     <string name="theming_settings_dashboard_icons_plain">Plain</string>
     <string name="theming_settings_dashboard_icons_plain_accent">Plain accent</string>
+    <string name="theming_settings_dashboard_icons_corvusify">Color Corvusify</string>
+    <string name="theming_settings_dashboard_icons_material">Material Design 2</string>
 
     <!--FOD icons -->
     <string name="fod_icon_picker_category_title">FOD customization options</string>
