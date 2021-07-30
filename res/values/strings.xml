@@ -748,10 +748,6 @@
     <string name="reticker_colored_title">Use app colored background</string>
     <string name="reticker_colored_summary">Replace reTicker background color using notification app main color</string>
 
-    <!-- Partial Screenshot -->
-    <string name="click_partial_screenshot_title">Click to partial screenshot</string>
-    <string name="click_partial_screenshot_summary">Short click Volume Down and Power to take partial screenshot</string>
-
     <!-- QS Category -->
     <string name="qs_header_category">QS Header</string>
     <string name="qs_footer_category">QS Footer</string>

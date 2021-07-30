@@ -33,12 +33,6 @@
         android:title="@string/volume_rocker_music_controls_title"
         android:defaultValue="false" />
 
-   <com.corvus.support.preferences.SystemSettingSwitchPreference
-        android:key="click_partial_screenshot"
-        android:title="@string/click_partial_screenshot_title"
-        android:summary="@string/click_partial_screenshot_summary"
-        android:defaultValue="false" /> 
-
     </PreferenceCategory>
 
 </PreferenceScreen>
