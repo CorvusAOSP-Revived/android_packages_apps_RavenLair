@@ -88,8 +88,6 @@
     <string name="icon_manager_summary">Configure the visibility of statusbar items</string>
     <string name="quicksettings_title">Quick settings</string>
     <string name="quicksettings_summary">Configure the layout of the quick settings area</string>
-    <string name="traffic_title">Traffic indicators</string>
-    <string name="traffic_summary">Enable and configure the traffic indicators</string>
     <string name="switch_category">Advanced Tweaks</string>
 
     <!-- Navigation -->
@@ -114,18 +112,6 @@
     <string name="global_actions_emergency">Emergency</string>
     <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
     <string name="global_actions_advanced_reboot_summary">When restarting also show options for recovery and bootloader</string>
-
-  <!-- Network traffic -->
-    <string name="network_traffic_state_title">Show net activity in statusbar</string>
-    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
-    <string name="network_traffic_hidearrow">Hide arrows</string>
-    <string name="network_traffic_hidearrow_summary">Hide the network traffic indicator arrows</string>
-    <string name="network_traffic_statusbar">Status bar</string>
-    <string name="network_traffic_header">Expanded header</string>
-
-    <!-- Network Traffic Location -->
-    <string name="network_traffic_location_title">Traffic indicator placement</string>
-    <string name="network_traffic_location_summary">Place indicator in either status bar or expanded header</string>
 
     <!-- Charging animation -->
     <string name="charging_animation_title">Charging animation</string>
@@ -796,5 +782,6 @@
     <!-- Colored Statusbar Icons -->
     <string name="statusbar_icons_style">Colored Statusbar Icons</string>
     <string name="statusbar_icons_style_summary">Choose the style of your statusbar icons (requires SystemUI reboot)</string>
+
 </resources>
 

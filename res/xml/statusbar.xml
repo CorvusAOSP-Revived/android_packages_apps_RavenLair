@@ -55,11 +55,4 @@
         android:summary="@string/quicksettings_summary"
         android:fragment="com.raven.lair.fragments.QuickSettings" />
 
-    <com.raven.lair.preferences.CategoryPreference
-        android:key="traffic_category"
-        android:icon="@drawable/dt_traffic"
-        android:title="@string/traffic_title"
-        android:summary="@string/traffic_summary"
-        android:fragment="com.raven.lair.fragments.TrafficIndicators" />
-
 </PreferenceScreen>

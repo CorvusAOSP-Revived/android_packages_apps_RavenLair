@@ -46,9 +46,6 @@
     <!-- Whether to display QS category -->
     <bool name="has_quick_settings">true</bool>
 
-    <!-- Whether to display traffic indicators category -->
-    <bool name="has_traffic">true</bool>
-
     <!-- Whether to display misc category -->
     <bool name="has_misc_options">true</bool>
 

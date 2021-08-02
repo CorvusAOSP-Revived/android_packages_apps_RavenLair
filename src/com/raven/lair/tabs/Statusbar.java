@@ -35,7 +35,6 @@ public class Statusbar extends SettingsPreferenceFragment
     private static final String CLOCK_CATEGORY = "clock_options_category";
     private static final String ICON_MANAGER_CATEGORY = "icon_manager_title";
     private static final String QUICK_SETTINGS_CATEGORY = "quick_settings_category";
-    private static final String TRAFFIC_CATEGORY = "traffic_category";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,10 +66,6 @@ public class Statusbar extends SettingsPreferenceFragment
             getPreferenceScreen().removePreference(QuickSettings);
         }
 
-        Preference Traffic = findPreference(TRAFFIC_CATEGORY);
-        if (!getResources().getBoolean(R.bool.has_traffic)) {
-            getPreferenceScreen().removePreference(Traffic);
-        }
     }
 
     @Override

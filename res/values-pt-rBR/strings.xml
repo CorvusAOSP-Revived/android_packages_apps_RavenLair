@@ -75,8 +75,6 @@
     <string name="icon_manager_summary">Configure a visibilidade dos itens da barra de status</string>
     <string name="quicksettings_title">Configurações rápidas</string>
     <string name="quicksettings_summary">Configure o layout da área de configurações rápidas</string>
-    <string name="traffic_title">Indicadores de tráfego</string>
-    <string name="traffic_summary">Habilite e configure os indicadores de tráfego</string>
     <string name="switch_category">Ajustes avançados</string>
 
     <!-- Navigation -->
@@ -105,18 +103,6 @@
     <!-- Heads up -->
     <string name="heads_up_notifications">Heads Up</string>
     <string name="heads_up_summary">Personalize o comportamento do Heads Up</string>
-
-  <!-- Network traffic -->
-    <string name="network_traffic_state_title">Mostrar atividade na barra de status</string>
-    <string name="network_traffic_autohide_threshold_title">Limite de ocultar atividade da rede (KB/s)</string>
-    <string name="network_traffic_hidearrow">Esconder setas</string>
-    <string name="network_traffic_hidearrow_summary">Ocultar as setas indicadoras de tráfego de rede</string>
-    <string name="network_traffic_statusbar">Barra de status</string>
-    <string name="network_traffic_header">Cabeçalho expandido</string>
-
-    <!-- Network Traffic Location -->
-    <string name="network_traffic_location_title">Posicionamento do indicador de tráfego</string>
-    <string name="network_traffic_location_summary">Coloque o indicador na barra de status ou no cabeçalho expandido</string>
 
     <!-- Charging animation -->
     <string name="charging_animation_title">Animação de carregamento</string>
