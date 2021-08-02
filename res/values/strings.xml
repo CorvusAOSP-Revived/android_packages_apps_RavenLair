@@ -783,5 +783,8 @@
     <string name="statusbar_icons_style">Colored Statusbar Icons</string>
     <string name="statusbar_icons_style_summary">Choose the style of your statusbar icons (requires SystemUI reboot)</string>
 
+    <!-- QS Status icons background -->
+    <string name="qs_status_background_title">QS Status icons background</string>
+    <string name="qs_status_background_summary">Toggle status icon background in QS Panel (requires SystemUI reboot)</string>
 </resources>
 

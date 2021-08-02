@@ -25,6 +25,12 @@
         android:defaultValue="false" />
 
     <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="qs_status_icon_background"
+        android:title="@string/qs_status_background_title"
+        android:summary="@string/qs_status_background_summary"
+        android:defaultValue="false" />
+
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:key="status_bar_locked_on_secure_keyguard"
         android:title="@string/lockscreen_qs_disabled_title"
         android:summary="@string/lockscreen_qs_disabled_summary"
