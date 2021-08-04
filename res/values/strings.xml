@@ -475,6 +475,7 @@
     <string name="fod_icon_animation_miui_aod">Xiaomi MIUI</string>
     <string name="fod_icon_animation_zaid_oneui">Samsung OneUI 3</string>
     <string name="fod_icon_animation_oneui2">Samsung OneUI 2</string>
+    <string name="config_fodIconAnimationPackage" translatable="false">com.android.systemui</string>
 
     <!-- FOD Animations -->
     <string name="fod_recog_animation">Fingerprint animation</string>
@@ -833,7 +834,7 @@
     <!-- Per-app volume -->
     <string name="show_app_volume_title">Show app volume</string>
     <string name="show_app_volume_summary">Show app volume in volume panel</string>
-    
+
     <!-- Gaming mode -->
     <string name="gaming_title">Gaming mode</string>
     <string name="gaming_title_summary">Extra features for immersive gaming experience</string>
