@@ -801,6 +801,8 @@
     <string name="network_traffic_arrow">Hide arrows</string>
     <string name="network_traffic_arrow_summary">Hide the network traffic indicator arrows</string>
     <string name="network_traffic_type">Select net activity type</string>
+    <string name="show_network_traffic_combined">Combined (Upload + Download)</string>
+    <string name="show_network_traffic_dynamic">Dynamic</string>
     <string name="show_network_traffic_up">Upload</string>
     <string name="show_network_traffic_down">Download</string>
     <string name="show_network_traffic_all">Both</string>
@@ -808,5 +810,8 @@
     <string name="network_traffic_layout_h">Horizontal</string>
     <string name="network_traffic_layout_v">Vertical</string>
     <string name="nettraf_font_size">Single net font size</string>
+
+    <!-- QS Header clock style -->
+    <string name="qs_clock_toggle">Switch QS Header clock style</string>
 </resources>
 

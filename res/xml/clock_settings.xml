@@ -22,6 +22,11 @@
             android:title="@string/status_bar_clock_show"
             android:defaultValue="true" />
 
+        <com.corvus.support.preferences.SystemSettingSwitchPreference
+            android:key="qs_header_date_location"
+            android:title="@string/qs_clock_toggle"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="statusbar_clock_style"
             android:title="@string/status_bar_clock_style_title"
