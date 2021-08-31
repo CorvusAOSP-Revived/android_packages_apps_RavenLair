@@ -36,13 +36,6 @@
         android:summary="@string/gaming_mode_summary"
         android:defaultValue="false" />
 
-    <Preference
-        android:key="display_cutout_force_fullscreen_settings"
-        android:title="@string/display_cutout_force_fullscreen_title"
-        android:summary="@string/display_cutout_force_fullscreen_summary"
-        android:fragment="com.raven.lair.fragments.DisplayCutoutForceFullscreenSettings"
-        settings:controller="com.raven.lair.fragments.DisplayCutoutForceFullscreenPreferenceController" />
-
     <PreferenceScreen
         android:key="cutout_settings"
         android:title="@string/cutout_main"

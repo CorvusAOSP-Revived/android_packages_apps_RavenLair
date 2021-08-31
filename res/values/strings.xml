@@ -729,21 +729,9 @@
     <string name="lockscreen_blur_title">Background blur</string>
     <string name="lockscreen_blur_disabled">Lock screen Blur cannot be enabled if your lock screen wallpaper does not match your home screen, or your device does not support Blur.</string>
 
-    <!-- reTicker -->
-    <string name="reticker_title">reTicker</string>
-    <string name="reticker_summary">Replace your notifications with a redesigned version of tickers! \nSlim and less invasive than a standard notification</string>
-    <string name="reticker_colored_title">Use app colored background</string>
-    <string name="reticker_colored_summary">Replace reTicker background color using notification app main color</string>
-
     <!-- QS Category -->
     <string name="qs_header_category">QS Header</string>
     <string name="qs_footer_category">QS Footer</string>
-
-    <!-- Notch: Full screen apps -->
-    <string name="display_cutout_force_fullscreen_title">Full screen apps</string>
-    <string name="display_cutout_force_fullscreen_summary">Ignore notch space for selected applications</string>
-    <string name="display_cutout_force_fullscreen_restart_app">Please restart the application to apply the changes.</string>
-    <string name="cutout_force_fullscreen_no_apps">No apps</string>
 
     <!-- Display cutout options -->
     <string name="cutout_main">Display Cutout</string>
