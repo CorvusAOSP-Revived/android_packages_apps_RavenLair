@@ -27,11 +27,14 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 
 import java.util.ArrayList;
 
 import com.raven.lair.preferences.PackageListPreference;
 
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class GamingModeSettings extends SettingsPreferenceFragment {
 
     private PackageListPreference mGamingPrefList;
@@ -52,4 +55,7 @@ public class GamingModeSettings extends SettingsPreferenceFragment {
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.CORVUS;
     }
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.lair_settings_gaming);
 }

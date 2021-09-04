@@ -19,6 +19,8 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import com.android.internal.util.corvus.Utils;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 import com.android.settings.corvus.margaritov.preference.colorpicker.ColorPickerPreference;
 import com.corvus.support.preferences.SystemSettingSwitchPreference;
 import com.corvus.support.preferences.CustomSeekBarPreference;
@@ -26,7 +28,7 @@ import com.corvus.support.preferences.SystemSettingSeekBarPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 
-
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class AmbientDecorSettings extends SettingsPreferenceFragment
                          implements OnPreferenceChangeListener {
 
@@ -157,4 +159,7 @@ public class AmbientDecorSettings extends SettingsPreferenceFragment
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.CORVUS;
     }
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.ambient_decor);
 }

@@ -30,7 +30,7 @@ import androidx.preference.PreferenceViewHolder;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup; 
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
@@ -38,6 +38,8 @@ import android.widget.ListView;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 import com.corvus.support.preferences.PackageListAdapter;
 import com.corvus.support.preferences.PackageListAdapter.PackageItem;
 import android.provider.Settings;
@@ -47,6 +49,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class HeadsUp extends SettingsPreferenceFragment
         implements Preference.OnPreferenceClickListener {
 
@@ -340,4 +343,7 @@ public class HeadsUp extends SettingsPreferenceFragment
         Settings.System.putString(getContentResolver(),
                 setting, value);
     }
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.heads_up_settings);
 }

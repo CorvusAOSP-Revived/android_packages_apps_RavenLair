@@ -56,7 +56,7 @@ import com.corvus.support.preferences.SystemSettingSwitchPreference;
 import java.util.Arrays;
 import java.util.List;
 
-@SearchIndexable
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class NetworkTraffic extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String NETWORK_TRAFFIC_FONT_SIZE  = "network_traffic_font_size";
@@ -207,22 +207,6 @@ public class NetworkTraffic extends SettingsPreferenceFragment implements OnPref
     /**
      * For Search.
      */
-    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider() {
-
-                @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(
-                        Context context, boolean enabled) {
-                    final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.network_traffic;
-                    return Arrays.asList(sir);
-                }
-
-                @Override
-                public List<String> getNonIndexableKeys(Context context) {
-                    final List<String> keys = super.getNonIndexableKeys(context);
-                    return keys;
-                }
-    };
-
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.network_traffic);
 }

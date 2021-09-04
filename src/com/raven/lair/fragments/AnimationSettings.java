@@ -37,6 +37,8 @@ import android.widget.Toast;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.internal.util.corvus.AwesomeAnimationHelper;
@@ -46,6 +48,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class AnimationSettings extends SettingsPreferenceFragment
             implements OnPreferenceChangeListener {
 
@@ -271,4 +274,11 @@ public class AnimationSettings extends SettingsPreferenceFragment
         int mNum = Settings.Global.getInt(mContext.getContentResolver(), mString, 0);
         return mAnimationsStrings[mNum];
     }
+
+    /**
+     * For Search.
+     */
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.corvus_settings_animations);
 }

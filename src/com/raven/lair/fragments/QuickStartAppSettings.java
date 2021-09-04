@@ -21,11 +21,15 @@ import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
 
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
+
 import java.util.Arrays;
 import java.util.HashSet;
 
 import com.android.settings.SettingsPreferenceFragment;
 
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class QuickStartAppSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
@@ -44,4 +48,11 @@ public class QuickStartAppSettings extends SettingsPreferenceFragment implements
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.CORVUS;
     }
+
+    /**
+     * For Search.
+     */
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.lair_settings_gaming_qs_app);
 }

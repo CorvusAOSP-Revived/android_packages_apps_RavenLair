@@ -30,14 +30,15 @@ import androidx.preference.PreferenceFragment;
 import com.android.settings.R;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settingslib.search.Indexable;
+import com.android.settingslib.search.SearchIndexable;
 import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class CutoutFragment extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener, Indexable {
+        implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_DISPLAY_CUTOUT_STYLE = "display_cutout_style";
     private ListPreference mCutoutStyle;
@@ -77,23 +78,8 @@ public class CutoutFragment extends SettingsPreferenceFragment
         super.onPause();
     }
 
-    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER = new BaseSearchIndexProvider() {
-
-        @Override
-        public List<SearchIndexableResource> getXmlResourcesToIndex(Context context, boolean enabled) {
-            List<SearchIndexableResource> indexables = new ArrayList<>();
-            SearchIndexableResource indexable = new SearchIndexableResource(context);
-            indexable.xmlResId = R.xml.cutout;
-            indexables.add(indexable);
-            return indexables;
-        }
-
-        @Override
-        public List<String> getNonIndexableKeys(Context context) {
-            List<String> keys = super.getNonIndexableKeys(context);
-            return keys;
-        }
-    };
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.cutout);
 
     @Override
     public int getMetricsCategory() {

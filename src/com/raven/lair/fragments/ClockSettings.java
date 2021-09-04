@@ -41,6 +41,8 @@ import android.widget.EditText;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 
 import com.corvus.support.preferences.SystemSettingSwitchPreference;
 import com.corvus.support.preferences.CustomSeekBarPreference;
@@ -49,8 +51,9 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import java.util.Date;
 
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class ClockSettings extends SettingsPreferenceFragment implements
-	OnPreferenceChangeListener  {
+	OnPreferenceChangeListener {
 
     private static final String STATUS_BAR_CLOCK = "status_bar_clock";
     private static final String STATUS_BAR_CLOCK_SECONDS = "status_bar_clock_seconds";
@@ -366,6 +369,9 @@ public class ClockSettings extends SettingsPreferenceFragment implements
         }
         mClockDateFormat.setEntries(parsedDateEntries);
     }
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.clock_settings);
 }
 
 

@@ -52,7 +52,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settingslib.search.Indexable;
+import com.android.settingslib.search.SearchIndexable;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.bumptech.glide.Glide;
@@ -64,6 +64,7 @@ import java.util.Arrays;
 import org.json.JSONObject;
 import org.json.JSONException;
 
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class FODIconAnimation extends SettingsPreferenceFragment {
 
     private RecyclerView mRecyclerView;
@@ -212,4 +213,6 @@ public class FODIconAnimation extends SettingsPreferenceFragment {
         return null;
     }
 
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.fingerprint_prefs);
 }

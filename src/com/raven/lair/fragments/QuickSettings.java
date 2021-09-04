@@ -39,7 +39,7 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settingslib.search.Indexable;
+import com.android.settingslib.search.SearchIndexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
@@ -49,8 +49,9 @@ import com.corvus.support.preferences.SystemSettingEditTextPreference;
 import java.util.ArrayList;
 import java.util.List;
 
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class QuickSettings extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener, Indexable {
+        implements Preference.OnPreferenceChangeListener {
 
      private static final String QS_FOOTER_TEXT_STRING = "qs_footer_text_string";
 
@@ -100,22 +101,10 @@ public class QuickSettings extends SettingsPreferenceFragment
         return MetricsProto.MetricsEvent.CORVUS;
     }
 
-    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider() {
-                @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                        boolean enabled) {
-                    final ArrayList<SearchIndexableResource> result = new ArrayList<>();
-                    final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.quick_settings;
-                    result.add(sir);
-                    return result;
-                }
+    /**
+     * For Search.
+     */
 
-                @Override
-                public List<String> getNonIndexableKeys(Context context) {
-                    final List<String> keys = super.getNonIndexableKeys(context);
-                    return keys;
-        }
-    };
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.quick_settings);
 }

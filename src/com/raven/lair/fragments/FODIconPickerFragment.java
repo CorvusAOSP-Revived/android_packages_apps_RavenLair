@@ -28,7 +28,10 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 
+@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class FODIconPickerFragment extends SettingsPreferenceFragment {
 
     @Override
@@ -44,4 +47,7 @@ public class FODIconPickerFragment extends SettingsPreferenceFragment {
     public int getMetricsCategory() {
         return MetricsEvent.CORVUS;
     }
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.corvus_settings_fod_picker);
 }
