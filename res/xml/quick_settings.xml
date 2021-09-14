@@ -30,6 +30,12 @@
         android:summary="@string/qs_status_background_summary"
         android:defaultValue="false" />
 
+    <com.corvus.support.preferences.SystemSettingSwitchPreference
+        android:key="qs_brightness_slider_style"
+        android:title="@string/qs_brightness_slider_title"
+        android:summary="@string/qs_brightness_slider_summary"
+        android:defaultValue="false" />
+
     <com.corvus.support.preferences.SystemSettingSeekBarPreference
         android:key="qs_panel_bg_alpha"
         android:title="@string/qs_panel_alpha_title"
