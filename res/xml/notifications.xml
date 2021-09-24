@@ -73,10 +73,4 @@
         android:summary="@string/center_notification_headers_summary"
         android:dependency="notification_headers"
         android:defaultValue="true" />
-
-	<com.corvus.support.preferences.SystemSettingSwitchPreference
-	    android:key="status_bar_notif_count"
-        android:title="@string/notif_count_title"
-        android:summary="@string/notif_count_summary"
-        android:defaultValue="false" />
 </PreferenceScreen>
