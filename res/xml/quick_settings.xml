@@ -18,11 +18,14 @@
             xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
             android:title="@string/quicksettings_title" >
 
-    <com.corvus.support.preferences.SystemSettingSwitchPreference
+    <com.corvus.support.preferences.SystemSettingListPreference
         android:key="qs_panel_bg_use_new_tint"
-        android:title="@string/qs_bg_use_new_tint"
-        android:summary="@string/qs_bg_use_new_tint_summary"
-        android:defaultValue="false" />
+        android:title="@string/qs_tile_tint_style_title"
+        android:summary="@string/qs_tile_tint_style_summary"
+        android:dialogTitle="@string/qs_tile_tint_style_title"
+        android:entries="@array/qs_tint_style_entries"
+	    android:entryValues="@array/qs_tint_style_values"
+        android:defaultValue="0" />
 
     <com.corvus.support.preferences.SystemSettingSwitchPreference
         android:key="qs_status_icon_background"
