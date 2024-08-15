@@ -894,4 +894,9 @@
     <string name="qs_slider_default">Default style</string>
     <string name="qs_slider_style_1">Thick accented style</string>
     <string name="qs_slider_style_2">A12 style</string>
+
+    <!-- PIF spoofing -->
+    <string name="pif_spoofing_title">Select PIF JSON File</string>
+    <string name="pif_spoofing_summary">Pick PIF JSON file to be used for spoofing play integrity</string>
+    <string name="pif_json_select_success">Successfully updated fingerprints. Now reboot to take effect.</string>
 </resources>
