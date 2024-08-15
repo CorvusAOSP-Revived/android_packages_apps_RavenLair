@@ -27,6 +27,11 @@ import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import androidx.preference.*;
 
+import android.net.Uri;
+import android.os.Handler;
+import android.util.Log;
+import android.widget.Toast;
+
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
@@ -40,6 +45,13 @@ import com.corvus.support.preferences.SystemSettingMasterSwitchPreference;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Iterator;
+
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
 public class Miscellaneous extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -49,12 +61,15 @@ public class Miscellaneous extends SettingsPreferenceFragment
     private static final String PREF_TILE_ANIM_INTERPOLATOR = "qs_tile_animation_interpolator";
     private static final String RINGTONE_FOCUS_MODE = "ringtone_focus_mode";
     private static final String PREF_KEY_CUTOUT = "cutout_settings";
+    private static final String KEY_PIF_JSON_FILE_PREFERENCE = "pif_json_file_preference";
 
     private ListPreference mHeadsetRingtoneFocus;
     private ListPreference mTileAnimationStyle;
     private ListPreference mTileAnimationDuration;
     private ListPreference mTileAnimationInterpolator;
+    private Preference mPifJsonFilePreference;
 
+    private Handler mHandler;
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
@@ -65,7 +80,9 @@ public class Miscellaneous extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        mHandler = new Handler();
         addPreferencesFromResource(R.xml.miscellaneous);
+        mPifJsonFilePreference = findPreference(KEY_PIF_JSON_FILE_PREFERENCE);
 
         final ContentResolver resolver = getActivity().getContentResolver();
 
@@ -100,6 +117,53 @@ public class Miscellaneous extends SettingsPreferenceFragment
         mTileAnimationInterpolator.setOnPreferenceChangeListener(this);
 
 	Preference mCutoutPref = (Preference) findPreference(PREF_KEY_CUTOUT);
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mPifJsonFilePreference) {
+            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+            intent.setType("application/json");
+            startActivityForResult(intent, 10001);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 10001 && resultCode == Activity.RESULT_OK) {
+            Uri uri = data.getData();
+            Log.d(TAG, "URI received: " + uri.toString());
+            try (InputStream inputStream = getActivity().getContentResolver().openInputStream(uri)) {
+                if (inputStream != null) {
+                    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                    byte[] buffer = new byte[1024];
+                    int length;
+                    while ((length = inputStream.read(buffer)) != -1) {
+                        byteArrayOutputStream.write(buffer, 0, length);
+                    }
+                    String json = new String(byteArrayOutputStream.toByteArray(), StandardCharsets.UTF_8);
+
+                    Log.d(TAG, "JSON data: " + json);
+                    JSONObject jsonObject = new JSONObject(json);
+                    for (Iterator<String> it = jsonObject.keys(); it.hasNext(); ) {
+                        String key = it.next();
+                        String value = jsonObject.getString(key);
+                        Log.d(TAG, "Setting property: persist.sys.pihooks_" + key + " = " + value);
+                        SystemProperties.set("persist.sys.pihooks_" + key, value);
+                    }
+                    Toast.makeText(
+                        getContext(),
+                        getContext().getResources().getString(R.string.pif_json_select_success),
+                        Toast.LENGTH_LONG
+                    ).show();
+                }
+            } catch (Exception e) {
+                Log.e(TAG, "Error reading JSON or setting properties", e);
+            }
+        }
     }
 
     @Override

@@ -43,6 +43,12 @@
 
     </PreferenceCategory>
 
+    <!-- PIF Spoofing -->
+    <Preference
+         android:key="pif_json_file_preference"
+         android:title="@string/pif_spoofing_title"
+         android:summary="@string/pif_spoofing_summary"/>
+
     <PreferenceCategory
         android:title="@string/dashboard_stuff" >
 
